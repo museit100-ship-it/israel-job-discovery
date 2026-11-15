@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-15T15:33:57Z",
-  "lastSuccessfulAt": "2026-11-15T15:33:57Z",
+  "attemptedAt": "2026-11-15T15:39:38Z",
+  "lastSuccessfulAt": "2026-11-15T15:39:38Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
@@ -71,7 +71,7 @@
     "Ashby/chamelio": {
       "success": true,
       "read": 14,
-      "matched": 1
+      "matched": 0
     },
     "Ashby/voodoo": {
       "success": true,
@@ -150,7 +150,7 @@
       "board": "matia",
       "sourceId": "71791c2e-e53b-4662-9e1c-89b2acf5a571",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:39:38Z",
       "publishedAt": "2026-10-28T02:17:50.735+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -175,7 +175,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:39:38Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -200,7 +200,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:39:38Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -225,7 +225,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:39:38Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -250,7 +250,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:39:38Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -288,7 +288,7 @@
       "workCondition": null,
       "score": 75,
       "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (65 נקודות) והמיקום במרכז (10 נקודות).",
-      "active": true
+      "active": false
     }
   ]
 }
