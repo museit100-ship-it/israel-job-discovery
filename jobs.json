@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-15T15:20:10Z",
-  "lastSuccessfulAt": "2026-11-15T15:20:10Z",
+  "attemptedAt": "2026-11-15T15:25:30Z",
+  "lastSuccessfulAt": "2026-11-15T15:25:30Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
@@ -55,7 +55,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-15T15:20:10Z",
+      "verifiedAt": "2026-11-15T15:25:30Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
