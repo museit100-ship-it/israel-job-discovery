@@ -9,16 +9,18 @@ ROOT = __dir__
 RULES = [
   ['חוויית עובד ותרבות', /employee (experience|engagement|welfare)|people (experience|operations|ops)|workplace experience|organizational culture|חוויית עובד|רווחת עובד/i, 'חוויית עובד, מעורבות עובדים ותפעול'],
   ['תקשורת פנים־ארגונית', /internal (comms|communications)|employee communications|תקשורת פנים/i, 'תקשורת פנים־ארגונית וכתיבת תוכן'],
-  ['ניהול משרד ותפעול מקום העבודה', /office (manager|management|coordinator|administrator|operations)|workplace (manager|coordinator|operations)|מנהל.{0,3} משרד/i, 'תפעול מקום העבודה ותיאום יוזמות'],
+  ['ניהול משרד ותפעול מקום העבודה', /office (manager|management|coordination|coordinator|admin(?:istrator)?|operations)|workplace (manager|coordination|coordinator|operations|services)|(?:מנהל|רכז|מתאמ).{0,6} משרד|תיאום משרד/i, 'תפעול מקום העבודה ותיאום יוזמות'],
   ['תוכן וסושיאל', /social media|content (market|creat|strateg|manager|specialist|writer|lead|coordinator)|creative content|copywriter|storyteller|סושיאל|מנהל.{0,3} תוכן/i, 'תוכן, עיצוב ושיווק דיגיטלי'],
   ['שיווק ותפעול', /marketing (coordinator|operations|associate|specialist)|רכז.{0,3} שיווק/i, 'תיאום שיווקי ועבודה עם צוותים שונים'],
-  ['תפעול משאבי אנוש', /hr (operations|coordinator|administrator)|human resources (operations|coordinator)/i, 'תפעול חוויית עובד ועבודה עם צוותים שונים']
+  ['תפעול משאבי אנוש', /hr (operations|coordinator|administrator)|human resources (operations|coordinator)/i, 'תפעול חוויית עובד ועבודה עם צוותים שונים'],
+  ['הסברה ותקשורת ציבורית', /\b(?:hasbara|public diplomacy|public affairs|public communications?|communications and advocacy)\b|הסברה|דוברות/i, 'הסברה, כתיבת תוכן ותקשורת עם קהלים']
 ].freeze
 ISRAEL = /\b(israel|tel[ -]aviv|ramat gan|herzliya|ra['’]?anana|kfar saba|petah tikva|bnei brak|holon|givatayim|hod hasharon|netanya|jerusalem|haifa|rehovot|yokneam)\b|ישראל|תל אביב|הרצליה|רעננה|רמת גן|כפר סבא/i
 CENTRAL = /tel[ -]aviv|ramat gan|herzliya|ra['’]?anana|kfar saba|petah tikva|givatayim|תל אביב|הרצליה|רעננה|רמת גן|כפר סבא/i
 GENERAL_TITLE = /\b(?:marketing|communications?|brand|creative|community|office|workplaces?|people|hr|human resources|operations)\b|שיווק|תפעול|תקשורת|משאבי אנוש/i
 RESPONSIBILITY = /\b(?:manage|coordinate|lead|create|produce|write|develop|own|organize|run|drive|support|build|plan|oversee|contribute|collaborate|execute)\b|ניהול|תיאום|יצירת|הובלת/i
 DUTY_RULES = [
+  [6, /public diplomacy|public awareness campaigns|public advocacy campaigns|hasbara|הסברה|דוברות/i],
   [1, /internal communications?|employee communications?|employee newsletters?|תקשורת פנים/i],
   [0, /employee (experience|engagement|welfare|lifecycle|events|services)|culture initiatives|onboarding and offboarding|חוויית עובד|רווחת עובדים/i],
   [3, /social media|content creation|content strategy|website content|creative content|storytelling|copywriting|newsletters|סושיאל|יצירת תוכן/i],
@@ -67,6 +69,7 @@ end
 def job_from(raw, source, timestamp)
   title = raw.fetch('title').gsub(/[[:space:]]+/, ' ').strip
   return if title.match?(/personal assistant|executive assistant|cto office|ceo office/i)
+  return if title.match?(/\bproduct market(?:ing|er)\b|שיווק מוצר/i)
   rule = RULES.find { |_, pattern, _| title.match?(pattern) }
   return unless rule || title.match?(GENERAL_TITLE)
 
@@ -93,7 +96,11 @@ def job_from(raw, source, timestamp)
 
       evidence = candidates.find { |line| line.match?(pattern) }
     end
-    return unless matched
+    # Office titles can also fit through responsibility for vendors, facilities or office logistics.
+    office_operations = rule.equal?(RULES[2]) && candidates.any? do |line|
+      line.match?(/office logistics|office events|office supplies|facilities|vendor relationships|vendors|ספקים|לוגיסטיקה/i)
+    end
+    return unless matched || office_operations
     rule ||= RULES[matched.first]
   end
   role_lines = duties ? lines.drop(duties + 1).take(2) : lines.select { |line| line.match?(/\b(you will|you.ll|responsible for)\b/i) }.take(2)
