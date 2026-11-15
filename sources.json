@@ -1,10 +1,218 @@
 [
-  {"provider":"Greenhouse","board":"wizinc","company":"Wiz","industry":"סייבר","description":"פלטפורמה לזיהוי וניהול סיכוני אבטחה בסביבות ענן.","website":"https://www.wiz.io/"},
-  {"provider":"Greenhouse","board":"via","company":"Via","industry":"טכנולוגיית תחבורה","description":"מפתחת תוכנה לתכנון והפעלה של שירותי תחבורה ציבורית ושיתופית.","website":"https://ridewithvia.com/"},
-  {"provider":"Greenhouse","board":"catonetworks","company":"Cato Networks","industry":"סייבר","description":"מספקת פלטפורמת ענן המשלבת תקשורת ארגונית ואבטחת רשת.","website":"https://www.catonetworks.com/"},
-  {"provider":"Greenhouse","board":"forter","company":"Forter","industry":"פינטק","description":"מספקת כלים למניעת הונאות ולניהול סיכונים בעסקאות מסחר מקוון.","website":"https://www.forter.com/"},
-  {"provider":"Greenhouse","board":"riskified","company":"Riskified","industry":"פינטק","description":"מספקת פתרונות לניהול הונאות בחנויות מקוונות ולהפחתת חיובים חוזרים.","website":"https://www.riskified.com/"},
-  {"provider":"Greenhouse","board":"similarweb","company":"Similarweb","industry":"אנליטיקה דיגיטלית","description":"מספקת נתונים על תעבורת אתרים ואפליקציות לצורך מחקר שוק וניתוח מתחרים.","website":"https://www.similarweb.com/"},
-  {"provider":"Greenhouse","board":"appsflyer","company":"AppsFlyer","industry":"טכנולוגיית שיווק","description":"מספקת מדידה וניתוח של ביצועי קמפיינים ושיוך התקנות של אפליקציות.","website":"https://www.appsflyer.com/"},
-  {"provider":"Ashby","board":"deel","company":"Deel","industry":"טכנולוגיית משאבי אנוש","description":"מספקת תוכנה לניהול העסקה, שכר ותשלומים לצוותים במדינות שונות.","website":"https://www.deel.com/"}
+  {
+    "provider": "Greenhouse",
+    "board": "wizinc",
+    "company": "Wiz",
+    "industry": "סייבר",
+    "description": "פלטפורמה לזיהוי וניהול סיכוני אבטחה בסביבות ענן.",
+    "website": "https://www.wiz.io/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "via",
+    "company": "Via",
+    "industry": "טכנולוגיית תחבורה",
+    "description": "מפתחת תוכנה לתכנון והפעלה של שירותי תחבורה ציבורית ושיתופית.",
+    "website": "https://ridewithvia.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "catonetworks",
+    "company": "Cato Networks",
+    "industry": "סייבר",
+    "description": "מספקת פלטפורמת ענן המשלבת תקשורת ארגונית ואבטחת רשת.",
+    "website": "https://www.catonetworks.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "forter",
+    "company": "Forter",
+    "industry": "פינטק",
+    "description": "מספקת כלים למניעת הונאות ולניהול סיכונים בעסקאות מסחר מקוון.",
+    "website": "https://www.forter.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "riskified",
+    "company": "Riskified",
+    "industry": "פינטק",
+    "description": "מספקת פתרונות לניהול הונאות בחנויות מקוונות ולהפחתת חיובים חוזרים.",
+    "website": "https://www.riskified.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "similarweb",
+    "company": "Similarweb",
+    "industry": "אנליטיקה דיגיטלית",
+    "description": "מספקת נתונים על תעבורת אתרים ואפליקציות לצורך מחקר שוק וניתוח מתחרים.",
+    "website": "https://www.similarweb.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "appsflyer",
+    "company": "AppsFlyer",
+    "industry": "טכנולוגיית שיווק",
+    "description": "מספקת מדידה וניתוח של ביצועי קמפיינים ושיוך התקנות של אפליקציות.",
+    "website": "https://www.appsflyer.com/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "deel",
+    "company": "Deel",
+    "industry": "טכנולוגיית משאבי אנוש",
+    "description": "מספקת תוכנה לניהול העסקה, שכר ותשלומים לצוותים במדינות שונות.",
+    "website": "https://www.deel.com/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "semperis",
+    "company": "Semperis",
+    "industry": "סייבר",
+    "description": "מגינה על מערכות זהות ארגוניות ומסייעת להתאושש מתקיפות.",
+    "website": "https://semperis.com/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "matia",
+    "company": "Matia",
+    "industry": "תשתיות נתונים",
+    "description": "מפתחת פלטפורמה להעברה, ניטור וניהול של נתונים ארגוניים.",
+    "website": "https://matia.io/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "mend-io",
+    "company": "Mend.io",
+    "industry": "סייבר",
+    "description": "מפתחת כלים לאבטחת יישומים וקוד פתוח.",
+    "website": "https://mend.io/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "eleoshealth",
+    "company": "Eleos Health",
+    "industry": "טכנולוגיית בריאות",
+    "description": "מפתחת כלים לתיעוד ועיבוד מידע עבור מטפלים בבריאות הנפש.",
+    "website": "https://eleos.health/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "honeycombinsurance",
+    "company": "Honeycomb Insurance",
+    "industry": "ביטוח דיגיטלי",
+    "description": "מפעילה פלטפורמת ביטוח לנכסי נדל״ן מסחריים.",
+    "website": "https://honeycombinsurance.com/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "chamelio",
+    "company": "Chamelio",
+    "industry": "טכנולוגיה משפטית",
+    "description": "מפתחת כלים מבוססי AI לצוותים משפטיים בארגונים.",
+    "website": "https://chamelio.ai/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "voodoo",
+    "company": "Voodoo",
+    "industry": "משחקים דיגיטליים",
+    "description": "מפתחת ומפיצה משחקים ואפליקציות למובייל.",
+    "website": "https://voodoo.io/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "2k",
+    "company": "2K",
+    "industry": "משחקים דיגיטליים",
+    "description": "מפתחת ומפיצה משחקי וידאו.",
+    "website": "https://2k.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "neosecurityinc",
+    "company": "Neo Security",
+    "industry": "סייבר",
+    "description": "מפתחת פלטפורמת סייבר מבוססת AI.",
+    "website": "https://neo.security/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "torq",
+    "company": "Torq",
+    "industry": "סייבר",
+    "description": "מפתחת אוטומציה לצוותי אבטחת מידע.",
+    "website": "https://torq.io/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "axonius",
+    "company": "Axonius",
+    "industry": "סייבר",
+    "description": "מפתחת פלטפורמה למיפוי ולניהול של נכסי IT ואבטחה.",
+    "website": "https://axonius.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "armissecurity",
+    "company": "Armis",
+    "industry": "סייבר",
+    "description": "מפתחת כלים לגילוי ולהגנה על מכשירים ונכסים מחוברים.",
+    "website": "https://armis.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "gongio",
+    "company": "Gong",
+    "industry": "תוכנה ארגונית",
+    "description": "מפתחת כלי ניתוח שיחות ונתונים לצוותי מכירות והכנסות.",
+    "website": "https://gong.io/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "lightricks",
+    "company": "Lightricks",
+    "industry": "טכנולוגיה יצירתית",
+    "description": "מפתחת אפליקציות וכלים מבוססי AI לעריכת תמונה ווידאו.",
+    "website": "https://lightricks.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "elastic",
+    "company": "Elastic",
+    "industry": "תוכנה ארגונית",
+    "description": "מפתחת תוכנה לחיפוש, ניטור ואבטחת מידע.",
+    "website": "https://elastic.co/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "jfrog",
+    "company": "JFrog",
+    "industry": "תשתיות תוכנה",
+    "description": "מפתחת כלים לניהול, הפצה ואבטחה של רכיבי תוכנה.",
+    "website": "https://jfrog.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "optimove",
+    "company": "Optimove",
+    "industry": "טכנולוגיית שיווק",
+    "description": "מפתחת תוכנה לניהול מסעות לקוח וקמפיינים מותאמים.",
+    "website": "https://optimove.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "fireblocks",
+    "company": "Fireblocks",
+    "industry": "פינטק",
+    "description": "מפתחת תשתית להעברה, שמירה וניהול של נכסים דיגיטליים.",
+    "website": "https://fireblocks.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "taboola",
+    "company": "Taboola",
+    "industry": "טכנולוגיית פרסום",
+    "description": "מפעילה פלטפורמת המלצות תוכן ופרסום באתרים.",
+    "website": "https://taboola.com/"
+  }
 ]

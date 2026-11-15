@@ -16,6 +16,15 @@ RULES = [
 ].freeze
 ISRAEL = /\b(israel|tel[ -]aviv|ramat gan|herzliya|ra['’]?anana|kfar saba|petah tikva|bnei brak|holon|givatayim|hod hasharon|netanya|jerusalem|haifa|rehovot|yokneam)\b|ישראל|תל אביב|הרצליה|רעננה|רמת גן|כפר סבא/i
 CENTRAL = /tel[ -]aviv|ramat gan|herzliya|ra['’]?anana|kfar saba|petah tikva|givatayim|תל אביב|הרצליה|רעננה|רמת גן|כפר סבא/i
+GENERAL_TITLE = /\b(?:marketing|communications?|brand|creative|community|office|workplaces?|people|hr|human resources|operations)\b|שיווק|תפעול|תקשורת|משאבי אנוש/i
+RESPONSIBILITY = /\b(?:manage|coordinate|lead|create|produce|write|develop|own|organize|run|drive|support|build|plan|oversee|contribute|collaborate|execute)\b|ניהול|תיאום|יצירת|הובלת/i
+DUTY_RULES = [
+  [1, /internal communications?|employee communications?|employee newsletters?|תקשורת פנים/i],
+  [0, /employee (experience|engagement|welfare|lifecycle|events|services)|culture initiatives|onboarding and offboarding|חוויית עובד|רווחת עובדים/i],
+  [3, /social media|content creation|content strategy|website content|creative content|storytelling|copywriting|newsletters|סושיאל|יצירת תוכן/i],
+  [4, /marketing operations|coordinate marketing campaigns|marketing automation|תפעול שיווק/i],
+  [5, /people operations|hr operations|HRIS|משאבי אנוש/i]
+].freeze
 
 def clean(html)
   text = CGI.unescapeHTML(html.to_s)
@@ -56,13 +65,14 @@ def employment_type(text)
 end
 
 def job_from(raw, source, timestamp)
-  title = raw.fetch('title').strip
+  title = raw.fetch('title').gsub(/[[:space:]]+/, ' ').strip
   return if title.match?(/personal assistant|executive assistant|cto office|ceo office/i)
   rule = RULES.find { |_, pattern, _| title.match?(pattern) }
-  return unless rule
+  return unless rule || title.match?(GENERAL_TITLE)
 
   ashby = source['provider'] == 'Ashby'
   location = ashby ? raw['location'] : raw.dig('location', 'name')
+  location = Array(raw['secondaryLocations']).find { |item| item.to_s.match?(ISRAEL) } unless location.to_s.match?(ISRAEL)
   return unless location.to_s.match?(ISRAEL)
   url = normalized_url(raw[ashby ? 'jobUrl' : 'absolute_url'])
   return unless url
@@ -72,14 +82,31 @@ def job_from(raw, source, timestamp)
   lines = clean(raw[ashby ? 'descriptionHtml' : 'content'])
   requirements = lines.index { |line| line.match?(/\A(?:requirements|what you.ll bring|qualifications|what you bring|what you need|the ideal candidate should have|about you|דרישות)\b/i) }
   duties = lines.index { |line| line.match?(/\A(?:responsibilities|what you.ll do|what you will do|what will you be doing|your impact|תחומי אחריות)\b/i) }
+  body = requirements ? lines.take(requirements) : lines
+  evidence = nil
+  inferred_from_description = rule.nil?
+  if inferred_from_description || rule.equal?(RULES[2])
+    candidates = body.select { |line| line.match?(RESPONSIBILITY) }
+    matched = DUTY_RULES.find do |index, pattern|
+      next false if rule && ![0, 1, 3].include?(index)
+      next false if inferred_from_description && index == 5 && !title.match?(/\b(?:people|hr|human resources)\b/i)
+
+      evidence = candidates.find { |line| line.match?(pattern) }
+    end
+    return unless matched
+    rule ||= RULES[matched.first]
+  end
   role_lines = duties ? lines.drop(duties + 1).take(2) : lines.select { |line| line.match?(/\b(you will|you.ll|responsible for)\b/i) }.take(2)
+  role_lines = [evidence, *role_lines].compact.uniq.take(2)
   role_lines = role_lines.reject { |line| line.match?(/\Awhy you.ll love/i) }
   work_schedule = raw['employmentType'] if ashby
   work_schedule ||= title[/\b(?:part|full)[ -]time\b/i]
   condition = lines.find { |line| line.match?(/(?:on-site|onsite|working from the office|office presence).*(?:days a week|days per week)/i) }
   identity = normalize(source.fetch('company')) + '/' + normalize(title)
   central = location.match?(CENTRAL)
-  score = central ? 85 : 75
+  base_score = inferred_from_description ? 65 : 75
+  score = base_score + (central ? 10 : 0)
+  match_basis = inferred_from_description ? 'תחומי אחריות במודעה' : 'כותרת המשרה'
   {
     'id' => Digest::SHA256.hexdigest(identity)[0, 24], 'title' => title,
     'company' => source.fetch('company'), 'location' => location,
@@ -94,7 +121,7 @@ def job_from(raw, source, timestamp)
     'summary' => role_lines.map { |line| line[0, 260] }.join(' '),
     'requirements' => requirements ? lines.drop(requirements + 1).take(2).join(' ')[0, 450] : nil,
     'workCondition' => condition&.slice(0, 260),
-    'score' => score, 'match' => "כותרת המשרה תואמת לתחום #{rule[2]} (75 נקודות)#{central ? ' והמיקום במרכז (10 נקודות)' : ''}.",
+    'score' => score, 'match' => "#{match_basis} מצביעים על זיקה לתחום #{rule[2]} (#{base_score} נקודות)#{central ? ' והמיקום במרכז (10 נקודות)' : ''}.",
     'active' => true
   }
 end
