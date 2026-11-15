@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "attemptedAt": "2026-11-15T15:20:10Z",
+  "lastSuccessfulAt": "2026-11-15T15:20:10Z",
+  "sources": {
+    "Greenhouse/wizinc": {
+      "success": true,
+      "read": 110,
+      "matched": 0
+    },
+    "Greenhouse/via": {
+      "success": true,
+      "read": 177,
+      "matched": 0
+    },
+    "Greenhouse/catonetworks": {
+      "success": true,
+      "read": 117,
+      "matched": 0
+    },
+    "Greenhouse/forter": {
+      "success": true,
+      "read": 19,
+      "matched": 0
+    },
+    "Greenhouse/riskified": {
+      "success": true,
+      "read": 42,
+      "matched": 0
+    },
+    "Greenhouse/similarweb": {
+      "success": true,
+      "read": 60,
+      "matched": 1
+    },
+    "Greenhouse/appsflyer": {
+      "success": true,
+      "read": 55,
+      "matched": 0
+    },
+    "Ashby/deel": {
+      "success": true,
+      "read": 0,
+      "matched": 0
+    }
+  },
+  "jobs": [
+    {
+      "id": "bf4544926d77f6a118f9adf4",
+      "title": "Employee Experience Specialist- Part Time",
+      "company": "Similarweb",
+      "location": "Tel Aviv-Yafo",
+      "url": "https://job-boards.greenhouse.io/similarweb/jobs/8303116",
+      "source": "Greenhouse",
+      "board": "similarweb",
+      "sourceId": 8303116,
+      "discoveredAt": "2026-11-15T15:16:05Z",
+      "verifiedAt": "2026-11-15T15:20:10Z",
+      "publishedAt": "2026-10-20T08:58:35-04:00",
+      "employmentType": null,
+      "workSchedule": "Part Time",
+      "industry": "אנליטיקה דיגיטלית",
+      "companyDescription": "מספקת נתונים על תעבורת אתרים ואפליקציות לצורך מחקר שוק וניתוח מתחרים.",
+      "website": "https://www.similarweb.com/",
+      "category": "חוויית עובד ותרבות",
+      "summary": "Oversee the employee journey, addressing both professional and personal aspects to ensure a well-rounded and fulfilling experience, including full employee lifecycle management (from onboarding to offboarding). Manage ongoing employee experience touchpoints, including support for employees through meaningful life moments—from joyful occasions such as birthdays, weddings, and newborns to more sensitive times like illness and condolences - ensuring care, empathy, and a",
+      "requirements": "At least 1 year of relevant experience as an Employee Experience Specialist and/or HR Administrator – advantage for experience in the high-tech industry. Flexibility and the ability to work in a fast-paced, entrepreneurial, and demanding environment.",
+      "workCondition": "This position is part-time (50%) and requires on-site presence 5 days a week in half-day shifts.",
+      "score": 85,
+      "match": "כותרת המשרה תואמת לתחום חוויית עובד, מעורבות עובדים ותפעול (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    }
+  ]
+}
