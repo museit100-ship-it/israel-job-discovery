@@ -1,0 +1,10 @@
+[
+  {"provider":"Greenhouse","board":"wizinc","company":"Wiz","industry":"סייבר","description":"פלטפורמה לזיהוי וניהול סיכוני אבטחה בסביבות ענן.","website":"https://www.wiz.io/"},
+  {"provider":"Greenhouse","board":"via","company":"Via","industry":"טכנולוגיית תחבורה","description":"מפתחת תוכנה לתכנון והפעלה של שירותי תחבורה ציבורית ושיתופית.","website":"https://ridewithvia.com/"},
+  {"provider":"Greenhouse","board":"catonetworks","company":"Cato Networks","industry":"סייבר","description":"מספקת פלטפורמת ענן המשלבת תקשורת ארגונית ואבטחת רשת.","website":"https://www.catonetworks.com/"},
+  {"provider":"Greenhouse","board":"forter","company":"Forter","industry":"פינטק","description":"מספקת כלים למניעת הונאות ולניהול סיכונים בעסקאות מסחר מקוון.","website":"https://www.forter.com/"},
+  {"provider":"Greenhouse","board":"riskified","company":"Riskified","industry":"פינטק","description":"מספקת פתרונות לניהול הונאות בחנויות מקוונות ולהפחתת חיובים חוזרים.","website":"https://www.riskified.com/"},
+  {"provider":"Greenhouse","board":"similarweb","company":"Similarweb","industry":"אנליטיקה דיגיטלית","description":"מספקת נתונים על תעבורת אתרים ואפליקציות לצורך מחקר שוק וניתוח מתחרים.","website":"https://www.similarweb.com/"},
+  {"provider":"Greenhouse","board":"appsflyer","company":"AppsFlyer","industry":"טכנולוגיית שיווק","description":"מספקת מדידה וניתוח של ביצועי קמפיינים ושיוך התקנות של אפליקציות.","website":"https://www.appsflyer.com/"},
+  {"provider":"Ashby","board":"deel","company":"Deel","industry":"טכנולוגיית משאבי אנוש","description":"מספקת תוכנה לניהול העסקה, שכר ותשלומים לצוותים במדינות שונות.","website":"https://www.deel.com/"}
+]
