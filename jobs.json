@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-15T15:25:30Z",
-  "lastSuccessfulAt": "2026-11-15T15:25:30Z",
+  "attemptedAt": "2026-11-15T15:33:57Z",
+  "lastSuccessfulAt": "2026-11-15T15:33:57Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
@@ -42,9 +42,154 @@
       "success": true,
       "read": 0,
       "matched": 0
+    },
+    "Ashby/semperis": {
+      "success": true,
+      "read": 23,
+      "matched": 2
+    },
+    "Ashby/matia": {
+      "success": true,
+      "read": 6,
+      "matched": 1
+    },
+    "Ashby/mend-io": {
+      "success": true,
+      "read": 9,
+      "matched": 0
+    },
+    "Greenhouse/eleoshealth": {
+      "success": true,
+      "read": 19,
+      "matched": 1
+    },
+    "Greenhouse/honeycombinsurance": {
+      "success": true,
+      "read": 13,
+      "matched": 0
+    },
+    "Ashby/chamelio": {
+      "success": true,
+      "read": 14,
+      "matched": 1
+    },
+    "Ashby/voodoo": {
+      "success": true,
+      "read": 102,
+      "matched": 0
+    },
+    "Greenhouse/2k": {
+      "success": true,
+      "read": 90,
+      "matched": 0
+    },
+    "Greenhouse/neosecurityinc": {
+      "success": true,
+      "read": 21,
+      "matched": 0
+    },
+    "Greenhouse/torq": {
+      "success": true,
+      "read": 23,
+      "matched": 0
+    },
+    "Greenhouse/axonius": {
+      "success": true,
+      "read": 22,
+      "matched": 0
+    },
+    "Greenhouse/armissecurity": {
+      "success": true,
+      "read": 0,
+      "matched": 0
+    },
+    "Greenhouse/gongio": {
+      "success": true,
+      "read": 89,
+      "matched": 0
+    },
+    "Greenhouse/lightricks": {
+      "success": true,
+      "read": 0,
+      "matched": 0
+    },
+    "Greenhouse/elastic": {
+      "success": true,
+      "read": 400,
+      "matched": 0
+    },
+    "Greenhouse/jfrog": {
+      "success": true,
+      "read": 75,
+      "matched": 0
+    },
+    "Greenhouse/optimove": {
+      "success": true,
+      "read": 6,
+      "matched": 0
+    },
+    "Greenhouse/fireblocks": {
+      "success": true,
+      "read": 22,
+      "matched": 0
+    },
+    "Greenhouse/taboola": {
+      "success": true,
+      "read": 76,
+      "matched": 0
     }
   },
   "jobs": [
+    {
+      "id": "35d60a5d621a75ce6bc82f15",
+      "title": "Office & Workplace Operations Manager",
+      "company": "Matia",
+      "location": "Tel-Aviv",
+      "url": "https://jobs.ashbyhq.com/matia/71791c2e-e53b-4662-9e1c-89b2acf5a571",
+      "source": "Ashby",
+      "board": "matia",
+      "sourceId": "71791c2e-e53b-4662-9e1c-89b2acf5a571",
+      "discoveredAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:33:57Z",
+      "publishedAt": "2026-10-28T02:17:50.735+00:00",
+      "employmentType": null,
+      "workSchedule": "FullTime",
+      "industry": "תשתיות נתונים",
+      "companyDescription": "מפתחת פלטפורמה להעברה, ניטור וניהול של נתונים ארגוניים.",
+      "website": "https://matia.io/",
+      "category": "ניהול משרד ותפעול מקום העבודה",
+      "summary": "Events & Employee Experience: Help organize Israel events and meetups, and coordinate employee gifts, swag and special-occasion items for birthdays and holidays. Employee Welfare: Look after the wellbeing of the team: keep the office clean, safe, comfortable and well stocked, and be the first point of contact for colleagues’ workplace needs. Help people feel welcome, supported and able to do their best work.",
+      "requirements": null,
+      "workCondition": null,
+      "score": 85,
+      "match": "כותרת המשרה מצביעים על זיקה לתחום תפעול מקום העבודה ותיאום יוזמות (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
+    {
+      "id": "bb67dcac60f3ad2ced2f9b11",
+      "title": "People Operations Manager",
+      "company": "Eleos Health",
+      "location": "Tel Aviv, Israel",
+      "url": "https://job-boards.eu.greenhouse.io/eleoshealth/jobs/4934726101",
+      "source": "Greenhouse",
+      "board": "eleoshealth",
+      "sourceId": 4934726101,
+      "discoveredAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:33:57Z",
+      "publishedAt": "2026-07-22T09:02:07-04:00",
+      "employmentType": null,
+      "workSchedule": null,
+      "industry": "טכנולוגיית בריאות",
+      "companyDescription": "מפתחת כלים לתיעוד ועיבוד מידע עבור מטפלים בבריאות הנפש.",
+      "website": "https://eleos.health/",
+      "category": "חוויית עובד ותרבות",
+      "summary": "Support key People processes including performance management, compensation cycles, talent reviews, engagement, and organizational changes. Help keep the People team’s priorities and projects organized, visible, and moving forward.",
+      "requirements": "4+ years of experience in People Operations, HR Operations, project management, business operations, or a similar role. Exceptional organization and follow-through — you naturally keep track of details, owners, deadlines, and next steps.",
+      "workCondition": null,
+      "score": 85,
+      "match": "כותרת המשרה מצביעים על זיקה לתחום חוויית עובד, מעורבות עובדים ותפעול (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
     {
       "id": "bf4544926d77f6a118f9adf4",
       "title": "Employee Experience Specialist- Part Time",
@@ -55,7 +200,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-15T15:25:30Z",
+      "verifiedAt": "2026-11-15T15:33:57Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -67,7 +212,82 @@
       "requirements": "At least 1 year of relevant experience as an Employee Experience Specialist and/or HR Administrator – advantage for experience in the high-tech industry. Flexibility and the ability to work in a fast-paced, entrepreneurial, and demanding environment.",
       "workCondition": "This position is part-time (50%) and requires on-site presence 5 days a week in half-day shifts.",
       "score": 85,
-      "match": "כותרת המשרה תואמת לתחום חוויית עובד, מעורבות עובדים ותפעול (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "match": "כותרת המשרה מצביעים על זיקה לתחום חוויית עובד, מעורבות עובדים ותפעול (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
+    {
+      "id": "c381fc8f7c4f9d0b1d6e1907",
+      "title": "HR Generalist – Maternity Leave Replacement",
+      "company": "Semperis",
+      "location": "Tel Aviv",
+      "url": "https://jobs.ashbyhq.com/semperis/71a75c54-c53c-41bc-bbae-4109f0858009",
+      "source": "Ashby",
+      "board": "semperis",
+      "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
+      "discoveredAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:33:57Z",
+      "publishedAt": "2026-11-01T07:50:54.551+00:00",
+      "employmentType": "החלפה לחופשת לידה",
+      "workSchedule": "FullTime",
+      "industry": "סייבר",
+      "companyDescription": "מגינה על מערכות זהות ארגוניות ומסייעת להתאושש מתקיפות.",
+      "website": "https://semperis.com/",
+      "category": "חוויית עובד ותרבות",
+      "summary": "Support employee lifecycle processes, including onboarding, offboarding, employee changes, and documentation. We’re looking for an HR Generalist for a 12-month maternity leave replacement who brings together a strong people focus and a solid HR Operations mindset. In this role, you will support employees and managers with day-to-day HR needs while also taking ownershi",
+      "requirements": "3+ years of experience in a similar role: Experience providing employee-focused HR support across the employee lifecycle.",
+      "workCondition": null,
+      "score": 75,
+      "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום חוויית עובד, מעורבות עובדים ותפעול (65 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
+    {
+      "id": "e2fc076271b9388161607a33",
+      "title": "Office Manager",
+      "company": "Semperis",
+      "location": "Tel Aviv",
+      "url": "https://jobs.ashbyhq.com/semperis/71d4c46d-70bb-4de7-9e51-bc19181a157a",
+      "source": "Ashby",
+      "board": "semperis",
+      "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
+      "discoveredAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:33:57Z",
+      "publishedAt": "2026-10-20T17:53:13.842+00:00",
+      "employmentType": null,
+      "workSchedule": "FullTime",
+      "industry": "סייבר",
+      "companyDescription": "מגינה על מערכות זהות ארגוניות ומסייעת להתאושש מתקיפות.",
+      "website": "https://semperis.com/",
+      "category": "ניהול משרד ותפעול מקום העבודה",
+      "summary": "We are looking for a highly organized and resourceful Office Manager to oversee all aspects of office operations and logistics. You will manage vendor relationships, facilities, supplies, employee services, and ensure that the office runs efficiently across mu Oversee day-to-day office operations, including supplies, equipment, and catering",
+      "requirements": null,
+      "workCondition": "Location: Israel – Onsite Ramat Gan- 5 days per week",
+      "score": 85,
+      "match": "כותרת המשרה מצביעים על זיקה לתחום תפעול מקום העבודה ותיאום יוזמות (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
+    {
+      "id": "ecb804da944390c41586f79f",
+      "title": "Product Marketing Manager",
+      "company": "Chamelio",
+      "location": "Tel Aviv",
+      "url": "https://jobs.ashbyhq.com/chamelio/8bfc7694-8d9c-4fe6-8cf0-14ec48e28665",
+      "source": "Ashby",
+      "board": "chamelio",
+      "sourceId": "8bfc7694-8d9c-4fe6-8cf0-14ec48e28665",
+      "discoveredAt": "2026-11-15T15:33:57Z",
+      "verifiedAt": "2026-11-15T15:33:57Z",
+      "publishedAt": "2026-10-13T08:35:44.343+00:00",
+      "employmentType": null,
+      "workSchedule": "FullTime",
+      "industry": "טכנולוגיה משפטית",
+      "companyDescription": "מפתחת כלים מבוססי AI לצוותים משפטיים בארגונים.",
+      "website": "https://chamelio.ai/",
+      "category": "תוכן וסושיאל",
+      "summary": "Contribute to newsletters, website content, and social media when needed. Build Our Product Marketing Foundation",
+      "requirements": "3–5 years of B2B SaaS product marketing experience , with hands-on ownership of positioning, messaging, launches, and sales enablement. A must! Exceptional writing and storytelling skills. You can take complex technology and make it simple, compelling, and memorable.",
+      "workCondition": null,
+      "score": 75,
+      "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (65 נקודות) והמיקום במרכז (10 נקודות).",
       "active": true
     }
   ]
