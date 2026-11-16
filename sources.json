@@ -214,5 +214,37 @@
     "industry": "טכנולוגיית פרסום",
     "description": "מפעילה פלטפורמת המלצות תוכן ופרסום באתרים.",
     "website": "https://taboola.com/"
+  },
+  {
+    "provider": "Lever",
+    "board": "tonkean",
+    "company": "Tonkean",
+    "industry": "אוטומציה ארגונית",
+    "description": "תוכנה לאוטומציה של תהליכי עבודה.",
+    "website": "https://www.tonkean.com/"
+  },
+  {
+    "provider": "Lever",
+    "board": "lendbuzz",
+    "company": "Lendbuzz",
+    "industry": "פינטק",
+    "description": "פלטפורמה למימון רכבים.",
+    "website": "https://lendbuzz.com/"
+  },
+  {
+    "provider": "Lever",
+    "board": "airslate",
+    "company": "airSlate",
+    "industry": "תוכנה ארגונית",
+    "description": "כלים לניהול מסמכים ואוטומציה של תהליכים.",
+    "website": "https://www.airslate.com/"
+  },
+  {
+    "provider": "Lever",
+    "board": "Zadara",
+    "company": "Zadara",
+    "industry": "תשתיות ענן",
+    "description": "שירותי ענן ותשתיות מחשוב.",
+    "website": "https://www.zadara.com/"
   }
 ]
