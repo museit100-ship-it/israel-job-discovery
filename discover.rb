@@ -19,7 +19,7 @@ RULES = [
 ].freeze
 ISRAEL = /\b(israel|tel[ -]aviv|ramat gan|herzliya|ra['’]?anana|kfar saba|petah tikva|bnei brak|holon|givatayim|hod hasharon|netanya|jerusalem|haifa|rehovot|yokneam)\b|ישראל|תל אביב|הרצליה|רעננה|רמת גן|כפר סבא/i
 CENTRAL = /tel[ -]aviv|ramat gan|herzliya|ra['’]?anana|kfar saba|petah tikva|givatayim|תל אביב|הרצליה|רעננה|רמת גן|כפר סבא/i
-GENERAL_TITLE = /\b(?:marketing|communications?|brand|creative|community|office|workplaces?|people|hr|human resources|operations)\b|שיווק|תפעול|תקשורת|משאבי אנוש/i
+GENERAL_TITLE = /\b(?:marketing|communications?|brand|creative|community|office|workplaces?|people|hr|human resources|operations|team coordinator|team administrator|administrative coordinator|program coordinator)\b|שיווק|תפעול|תקשורת|משאבי אנוש|אדמיניסטרציה|רכז.{0,3} צוות/i
 RESPONSIBILITY = /\b(?:manage|coordinate|lead|create|produce|write|develop|own|organize|run|drive|support|build|plan|oversee|contribute|collaborate|execute)\b|ניהול|תיאום|יצירת|הובלת/i
 DUTY_RULES = [
   [6, /public diplomacy|public awareness campaigns|public advocacy campaigns|hasbara|הסברה|דוברות/i],
@@ -39,6 +39,10 @@ end
 
 def normalize(value)
   value.to_s.unicode_normalize(:nfkc).downcase.gsub(/[^[:alnum:]]+/, ' ').strip
+end
+
+def role_identity(title)
+  normalize(title).sub(/\s+(?:part time|full time)\z/, '').gsub(/\band\s+/, '')
 end
 
 def normalized_url(value)
@@ -108,10 +112,10 @@ def job_from(raw, source, timestamp)
   role_lines = duties ? lines.drop(duties + 1).take(2) : lines.select { |line| line.match?(/\b(you will|you.ll|responsible for)\b/i) }.take(2)
   role_lines = [evidence, *role_lines].compact.uniq.take(2)
   role_lines = role_lines.reject { |line| line.match?(/\Awhy you.ll love/i) }
-  work_schedule = raw['employmentType'] if ashby
+  work_schedule = raw['employmentType']
   work_schedule ||= title[/\b(?:part|full)[ -]time\b/i]
   condition = lines.find { |line| line.match?(/(?:on-site|onsite|working from the office|office presence).*(?:days a week|days per week)/i) }
-  identity = normalize(source.fetch('company')) + '/' + normalize(title)
+  identity = normalize(source.fetch('company')) + '/' + role_identity(title)
   central = location.match?(CENTRAL)
   base_score = inferred_from_description ? 65 : 75
   score = base_score + (central ? 10 : 0)
@@ -143,6 +147,8 @@ def read_board(source)
     board = URI.encode_www_form_component(source.fetch('board'))
     url = if source.fetch('provider') == 'Ashby'
             "https://api.ashbyhq.com/posting-api/job-board/#{board}"
+          elsif source.fetch('provider') == 'Lever'
+            "https://api.lever.co/v0/postings/#{board}?mode=json"
           else
             "https://boards-api.greenhouse.io/v1/boards/#{board}/jobs?content=true"
           end
@@ -154,6 +160,24 @@ def read_board(source)
     raise "HTTP #{response.code}" unless response.is_a?(Net::HTTPSuccess)
     payload = JSON.parse(response.body)
   end
+  if source.fetch('provider') == 'Lever'
+    raise 'Invalid Lever feed' unless payload.is_a?(Array)
+    return payload.map do |posting|
+      categories = posting.fetch('categories')
+      sections = Array(posting['lists']).map do |section|
+        "<p>#{CGI.escapeHTML(section.fetch('text', ''))}</p>#{section['content']}"
+      end
+      {
+        'id' => posting.fetch('id'),
+        'title' => posting.fetch('text'),
+        'location' => { 'name' => categories['location'] },
+        'secondaryLocations' => categories['allLocations'],
+        'absolute_url' => posting.fetch('hostedUrl'),
+        'content' => [posting['description'], *sections].compact.join("\n"),
+        'employmentType' => categories['commitment']
+      }
+    end
+  end
   jobs = payload.fetch('jobs')
   raise 'Invalid jobs feed' unless jobs.is_a?(Array)
   jobs
@@ -161,7 +185,14 @@ end
 
 def discover(sources, previous, timestamp)
   jobs = previous.fetch('jobs', []).each_with_object({}) { |job, index| index[job.fetch('id')] = job }
-  seen_urls = jobs.values.to_h { |job| [job['url'], job['id']] }
+  seen_urls = {}
+  seen_roles = {}
+  jobs.each_value do |job|
+    url = normalized_url(job['url'])
+    seen_urls[url] ||= job['id'] if url
+    seen_roles[[normalize(job['company']), role_identity(job['title'])]] ||= job['id']
+  end
+  matched_ids = {}
   status = {}
   sources.each do |source|
     key = source.values_at('provider', 'board').join('/')
@@ -169,15 +200,19 @@ def discover(sources, previous, timestamp)
       raw = read_board(source)
       live = raw.map { |item| job_from(item, source, timestamp) }.compact
       jobs.each_value do |job|
-        job['active'] = false if job.values_at('source', 'board').join('/') == key
+        job['active'] = false if job.values_at('source', 'board').join('/') == key && !matched_ids[job['id']]
       end
       live.each do |job|
-        id = seen_urls.fetch(job['url'], job['id'])
+        role = [normalize(job['company']), role_identity(job['title'])]
+        id = seen_urls[job['url']] || seen_roles[role] || job['id']
+        seen_urls[job['url']] = id
+        seen_roles[role] = id
+        next if matched_ids[id]
         prior = jobs[id]
         job['id'] = id
         job['discoveredAt'] = prior['discoveredAt'] if prior
         jobs[id] = job
-        seen_urls[job['url']] = id
+        matched_ids[id] = true
       end
       status[key] = { 'success' => true, 'read' => raw.size, 'matched' => live.size }
       puts "#{key}: #{raw.size} postings, #{live.size} matched"
