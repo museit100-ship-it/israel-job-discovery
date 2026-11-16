@@ -1,14 +1,7 @@
 name: Daily job discovery
 
 on:
-  schedule:
-    - cron: '23 6 * * *'
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/discover.yml'
-      - 'discover.rb'
-      - 'sources.json'
 
 permissions:
   contents: write
@@ -19,6 +12,8 @@ concurrency:
 
 jobs:
   discover:
+    # Paused until the database execution guard is deployed.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
