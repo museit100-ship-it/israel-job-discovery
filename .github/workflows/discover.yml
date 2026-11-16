@@ -1,37 +1,34 @@
-name: Daily job discovery
-
+name: Check discovery connection
 on:
   workflow_dispatch:
-
-permissions:
-  contents: write
-
+permissions: {}
 concurrency:
   group: job-discovery
   cancel-in-progress: false
-
 jobs:
-  discover:
-    # Paused until the database execution guard is deployed.
-    if: ${{ false }}
+  connection:
+    if: github.run_attempt == '1'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 2
+    env:
+      SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Collect vacancies
-        id: collect
-        continue-on-error: true
-        run: ruby discover.rb
-      - name: Save feed and source status
-        if: always() && steps.collect.outcome != 'skipped'
+      - name: Check run log access without starting a scan
+        shell: bash
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- jobs.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Refresh public jobs feed'
-            git push
+          test "$SUPABASE_URL" = 'https://urgzjcfnzkzpqkqykqxh.supabase.co'
+          test -n "$SUPABASE_SECRET_KEY"
+          args=(-H "apikey: $SUPABASE_SECRET_KEY")
+          if [[ "$SUPABASE_SECRET_KEY" != sb_secret_* ]]; then
+            args+=(-H "Authorization: Bearer $SUPABASE_SECRET_KEY")
           fi
-      - name: Report collection failures
-        if: always() && steps.collect.outcome == 'failure'
-        run: exit 1
+          curl -fsS --max-time 15 "${args[@]}" \
+            "$SUPABASE_URL/rest/v1/discovery_runs?select=run_id&limit=0" >/dev/null
+          code=$(curl -sS --max-time 15 "${args[@]}" -H 'Content-Type: application/json' \
+            -o "$RUNNER_TEMP/discovery-check.json" -w '%{http_code}' \
+            --data '{"p_trigger":"connection_check"}' \
+            "$SUPABASE_URL/rest/v1/rpc/claim_discovery_run")
+          test "$code" = '400'
+          jq -e '.message == "Invalid discovery trigger"' "$RUNNER_TEMP/discovery-check.json" >/dev/null
+          echo 'Run log and claim RPC are accessible. No run was reserved.'
