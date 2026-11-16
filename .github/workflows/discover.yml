@@ -2,6 +2,10 @@ name: Daily job discovery
 
 on:
   workflow_dispatch:
+  # Add this trigger after deployment approval:
+  # schedule:
+  #   - cron: '0 8 * * *'
+  #     timezone: 'Asia/Jerusalem'
 
 permissions:
   contents: write
@@ -12,16 +16,18 @@ concurrency:
 
 jobs:
   discover:
-    # Paused until the database execution guard is deployed.
-    if: ${{ false }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    if: github.run_attempt == '1'
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Collect vacancies
         id: collect
         continue-on-error: true
-        run: ruby discover.rb
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: timeout --signal=KILL 10m ruby discover.rb
       - name: Save feed and source status
         if: always() && steps.collect.outcome != 'skipped'
         run: |
