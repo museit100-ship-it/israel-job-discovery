@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-16T09:09:40Z",
-  "lastSuccessfulAt": "2026-11-16T09:09:40Z",
+  "attemptedAt": "2026-11-16T11:20:50Z",
+  "lastSuccessfulAt": "2026-11-16T11:20:50Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
@@ -15,7 +15,7 @@
     },
     "Greenhouse/catonetworks": {
       "success": true,
-      "read": 116,
+      "read": 115,
       "matched": 0
     },
     "Greenhouse/forter": {
@@ -35,7 +35,7 @@
     },
     "Greenhouse/appsflyer": {
       "success": true,
-      "read": 54,
+      "read": 55,
       "matched": 0
     },
     "Ashby/deel": {
@@ -75,7 +75,7 @@
     },
     "Ashby/voodoo": {
       "success": true,
-      "read": 102,
+      "read": 103,
       "matched": 0
     },
     "Greenhouse/2k": {
@@ -120,7 +120,7 @@
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 76,
+      "read": 75,
       "matched": 0
     },
     "Greenhouse/optimove": {
@@ -137,6 +137,26 @@
       "success": true,
       "read": 68,
       "matched": 0
+    },
+    "Lever/tonkean": {
+      "success": true,
+      "read": 2,
+      "matched": 1
+    },
+    "Lever/lendbuzz": {
+      "success": true,
+      "read": 53,
+      "matched": 0
+    },
+    "Lever/airslate": {
+      "success": true,
+      "read": 17,
+      "matched": 1
+    },
+    "Lever/Zadara": {
+      "success": true,
+      "read": 8,
+      "matched": 0
     }
   },
   "jobs": [
@@ -150,7 +170,7 @@
       "board": "matia",
       "sourceId": "71791c2e-e53b-4662-9e1c-89b2acf5a571",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
       "publishedAt": "2026-10-28T02:17:50.735+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -166,6 +186,31 @@
       "active": true
     },
     {
+      "id": "96f9d711901024e5ccb2fe82",
+      "title": "Senior Content Manager",
+      "company": "airSlate",
+      "location": "Israel",
+      "url": "https://jobs.lever.co/airslate/65b92dec-8594-4b9e-afb0-59d79450f1ca",
+      "source": "Lever",
+      "board": "airslate",
+      "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
+      "discoveredAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
+      "publishedAt": null,
+      "employmentType": null,
+      "workSchedule": "Full-time",
+      "industry": "תוכנה ארגונית",
+      "companyDescription": "כלים לניהול מסמכים ואוטומציה של תהליכים.",
+      "website": "https://www.airslate.com/",
+      "category": "תוכן וסושיאל",
+      "summary": "As Senior Content Manager, you will own content end to end, from brief to production, publishing, and optimization, working closely with the Principal Product Marketing Manager with direct line of sight into product strategy and launches. What you'll be working on:",
+      "requirements": null,
+      "workCondition": null,
+      "score": 75,
+      "match": "כותרת המשרה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (75 נקודות).",
+      "active": true
+    },
+    {
       "id": "9844decd47ac638521bd727e",
       "title": "Office Admin & Operations Manager (part time)",
       "company": "Chamelio",
@@ -175,7 +220,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -191,6 +236,31 @@
       "active": true
     },
     {
+      "id": "a6d93e4c081d2570f9a759d6",
+      "title": "Workplace & Talent Partner - Maternity Leave Replacement",
+      "company": "Tonkean",
+      "location": "Tel Aviv",
+      "url": "https://jobs.lever.co/tonkean/21b00ce8-3b3c-47b7-8c58-b20e2146aa32",
+      "source": "Lever",
+      "board": "tonkean",
+      "sourceId": "21b00ce8-3b3c-47b7-8c58-b20e2146aa32",
+      "discoveredAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
+      "publishedAt": null,
+      "employmentType": "החלפה לחופשת לידה",
+      "workSchedule": null,
+      "industry": "אוטומציה ארגונית",
+      "companyDescription": "תוכנה לאוטומציה של תהליכי עבודה.",
+      "website": "https://www.tonkean.com/",
+      "category": "חוויית עובד ותרבות",
+      "summary": "Tonkean is the world’s first totally customizable process experience platform. With Tonkean, you can create intelligent, personalized automations that integrate with every app or system your organization uses. You can cultivate an employee experience that demo In this role, you’ll be responsible for creating a great workplace experience while supporting our talent acquisition efforts and working closely with team leads to support the company’s hiring needs.",
+      "requirements": "We’re looking for a proactive, organized, and people-oriented Workplace & Talent Partner to join our team in Israel for a maternity leave replacement. In this role, you’ll be responsible for creating a great workplace experience while supporting our talent acquisition efforts and working closely with team leads to support the company’s hiring needs.",
+      "workCondition": null,
+      "score": 75,
+      "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום חוויית עובד, מעורבות עובדים ותפעול (65 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
+    {
       "id": "bb67dcac60f3ad2ced2f9b11",
       "title": "People Operations Manager",
       "company": "Eleos Health",
@@ -200,7 +270,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -225,7 +295,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -250,7 +320,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -275,7 +345,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T11:20:50Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
