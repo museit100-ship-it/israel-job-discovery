@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-15T15:39:38Z",
-  "lastSuccessfulAt": "2026-11-15T15:39:38Z",
+  "attemptedAt": "2026-11-16T09:09:40Z",
+  "lastSuccessfulAt": "2026-11-16T09:09:40Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
-      "read": 110,
+      "read": 111,
       "matched": 0
     },
     "Greenhouse/via": {
       "success": true,
-      "read": 177,
+      "read": 176,
       "matched": 0
     },
     "Greenhouse/catonetworks": {
       "success": true,
-      "read": 117,
+      "read": 116,
       "matched": 0
     },
     "Greenhouse/forter": {
@@ -35,7 +35,7 @@
     },
     "Greenhouse/appsflyer": {
       "success": true,
-      "read": 55,
+      "read": 54,
       "matched": 0
     },
     "Ashby/deel": {
@@ -70,8 +70,8 @@
     },
     "Ashby/chamelio": {
       "success": true,
-      "read": 14,
-      "matched": 0
+      "read": 17,
+      "matched": 1
     },
     "Ashby/voodoo": {
       "success": true,
@@ -90,7 +90,7 @@
     },
     "Greenhouse/torq": {
       "success": true,
-      "read": 23,
+      "read": 22,
       "matched": 0
     },
     "Greenhouse/axonius": {
@@ -120,7 +120,7 @@
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 75,
+      "read": 76,
       "matched": 0
     },
     "Greenhouse/optimove": {
@@ -135,7 +135,7 @@
     },
     "Greenhouse/taboola": {
       "success": true,
-      "read": 76,
+      "read": 68,
       "matched": 0
     }
   },
@@ -150,7 +150,7 @@
       "board": "matia",
       "sourceId": "71791c2e-e53b-4662-9e1c-89b2acf5a571",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:39:38Z",
+      "verifiedAt": "2026-11-16T09:09:40Z",
       "publishedAt": "2026-10-28T02:17:50.735+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -159,6 +159,31 @@
       "website": "https://matia.io/",
       "category": "ניהול משרד ותפעול מקום העבודה",
       "summary": "Events & Employee Experience: Help organize Israel events and meetups, and coordinate employee gifts, swag and special-occasion items for birthdays and holidays. Employee Welfare: Look after the wellbeing of the team: keep the office clean, safe, comfortable and well stocked, and be the first point of contact for colleagues’ workplace needs. Help people feel welcome, supported and able to do their best work.",
+      "requirements": null,
+      "workCondition": null,
+      "score": 85,
+      "match": "כותרת המשרה מצביעים על זיקה לתחום תפעול מקום העבודה ותיאום יוזמות (75 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
+    {
+      "id": "9844decd47ac638521bd727e",
+      "title": "Office Admin & Operations Manager (part time)",
+      "company": "Chamelio",
+      "location": "Tel Aviv",
+      "url": "https://jobs.ashbyhq.com/chamelio/301a34e9-b79e-41ac-8f1f-d72381592196",
+      "source": "Ashby",
+      "board": "chamelio",
+      "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
+      "discoveredAt": "2026-11-16T09:09:40Z",
+      "verifiedAt": "2026-11-16T09:09:40Z",
+      "publishedAt": "2026-11-16T09:05:36.792+00:00",
+      "employmentType": null,
+      "workSchedule": "FullTime",
+      "industry": "טכנולוגיה משפטית",
+      "companyDescription": "מפתחת כלים מבוססי AI לצוותים משפטיים בארגונים.",
+      "website": "https://chamelio.ai/",
+      "category": "ניהול משרד ותפעול מקום העבודה",
+      "summary": "Office & Workplace Operations: Manage daily operations of our Tel Aviv office, including facilities, vendors, supplies, deliveries, and office budgets, proactively solving operational needs. Travel Management: Own end-to-end domestic and international travel logistics (flights, hotels, visas, ground transport) across time zones, resolving last-minute changes within company policy and budget.",
       "requirements": null,
       "workCondition": null,
       "score": 85,
@@ -175,7 +200,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:39:38Z",
+      "verifiedAt": "2026-11-16T09:09:40Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -200,7 +225,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-15T15:39:38Z",
+      "verifiedAt": "2026-11-16T09:09:40Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -225,7 +250,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:39:38Z",
+      "verifiedAt": "2026-11-16T09:09:40Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -250,7 +275,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-15T15:39:38Z",
+      "verifiedAt": "2026-11-16T09:09:40Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
