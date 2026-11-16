@@ -3,9 +3,11 @@ require 'digest'
 require 'json'
 require 'net/http'
 require 'time'
+require 'timeout'
 require 'uri'
 
 ROOT = __dir__
+DiscoveryDeadline = Class.new(StandardError)
 RULES = [
   ['חוויית עובד ותרבות', /employee (experience|engagement|welfare)|people (experience|operations|ops)|workplace experience|organizational culture|חוויית עובד|רווחת עובד/i, 'חוויית עובד, מעורבות עובדים ותפעול'],
   ['תקשורת פנים־ארגונית', /internal (comms|communications)|employee communications|תקשורת פנים/i, 'תקשורת פנים־ארגונית וכתיבת תוכן'],
@@ -146,6 +148,7 @@ def read_board(source)
           end
     uri = URI(url)
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
+      http.max_retries = 0
       http.get(uri.request_uri, 'Accept' => 'application/json')
     end
     raise "HTTP #{response.code}" unless response.is_a?(Net::HTTPSuccess)
@@ -178,9 +181,11 @@ def discover(sources, previous, timestamp)
       end
       status[key] = { 'success' => true, 'read' => raw.size, 'matched' => live.size }
       puts "#{key}: #{raw.size} postings, #{live.size} matched"
+    rescue DiscoveryDeadline
+      raise
     rescue StandardError => error
       warn "#{key}: #{error.class}: #{error.message}"
-      status[key] = { 'success' => false }
+      status[key] = { 'success' => false, 'error' => "#{error.class}: #{error.message}" }
     end
   end
 
@@ -192,13 +197,73 @@ def discover(sources, previous, timestamp)
   }
 end
 
-if $PROGRAM_NAME == __FILE__
-  output = ARGV.fetch(0, File.join(ROOT, 'jobs.json'))
-  sources = JSON.parse(File.read(File.join(ROOT, 'sources.json')))
-  previous = File.exist?(output) ? JSON.parse(File.read(output)) : {}
-  result = discover(sources, previous, Time.now.utc.iso8601)
+def discovery_rpc(function, arguments)
+  url = URI(ENV.fetch('SUPABASE_URL'))
+  unless url.is_a?(URI::HTTPS) && url.host && !url.userinfo
+    raise 'SUPABASE_URL must be an HTTPS URL'
+  end
+  url.path = "/rest/v1/rpc/#{function}"
+  url.query = nil
+  url.fragment = nil
+  secret = ENV.fetch('SUPABASE_SECRET_KEY')
+  headers = { 'apikey' => secret, 'Content-Type' => 'application/json' }
+  headers['Authorization'] = "Bearer #{secret}" unless secret.start_with?('sb_secret_')
+
+  response = Net::HTTP.start(url.host, url.port, use_ssl: true, open_timeout: 4,
+                             read_timeout: 4, write_timeout: 4) do |http|
+    http.max_retries = 0
+    http.post(url.request_uri, JSON.generate(arguments), headers)
+  end
+  raise "Discovery database #{function}: HTTP #{response.code}" unless response.is_a?(Net::HTTPSuccess)
+  JSON.parse(response.body)
+end
+
+def write_feed(output, result)
   temporary = "#{output}.#{Process.pid}.tmp"
   File.write(temporary, JSON.pretty_generate(result) + "\n")
   File.rename(temporary, output)
-  exit(result.fetch('sources').values.all? { |source| source['success'] } ? 0 : 1)
+ensure
+  File.delete(temporary) if temporary && File.exist?(temporary)
 end
+
+def run_discovery(output)
+  fixtures = ENV['JOB_DISCOVERY_FIXTURES']
+  trigger = ENV['GITHUB_EVENT_NAME'] == 'schedule' ? 'scheduled' : 'manual'
+  unless fixtures
+    run_id = discovery_rpc('claim_discovery_run', { 'p_trigger' => trigger })
+    unless run_id
+      puts 'Discovery skipped by the database execution guard.'
+      return 0
+    end
+  end
+
+  outcome = 'failed'
+  details = {}
+  begin
+    # Leave time to report the outcome before the runner's hard stop.
+    Timeout.timeout(9 * 60, DiscoveryDeadline) do
+      sources = JSON.parse(File.read(File.join(ROOT, 'sources.json')))
+      previous = File.exist?(output) ? JSON.parse(File.read(output)) : {}
+      result = discover(sources, previous, Time.now.utc.iso8601)
+      write_feed(output, result)
+      details = { 'sources' => result.fetch('sources') }
+      outcome = 'succeeded' if details.fetch('sources').values.all? { |source| source['success'] }
+    end
+  rescue DiscoveryDeadline
+    outcome = 'timed_out'
+    details = { 'error' => 'Discovery exceeded its execution window' }
+  rescue StandardError => error
+    details = { 'error' => "#{error.class}: #{error.message}" }
+  ensure
+    if run_id
+      saved = discovery_rpc('finish_discovery_run', {
+        'p_run_id' => run_id, 'p_outcome' => outcome, 'p_details' => details
+      })
+      raise 'The database did not record discovery completion' unless saved
+    end
+  end
+  warn details['error'] if details['error']
+  outcome == 'succeeded' ? 0 : 1
+end
+
+exit(run_discovery(ARGV.fetch(0, File.join(ROOT, 'jobs.json')))) if $PROGRAM_NAME == __FILE__
