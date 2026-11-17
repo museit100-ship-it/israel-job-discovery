@@ -12,8 +12,8 @@ RULES = [
   ['חוויית עובד ותרבות', /employee (experience|engagement|welfare)|people (experience|operations|ops)|workplace experience|organizational culture|חוויית עובד|רווחת עובד/i, 'חוויית עובד, מעורבות עובדים ותפעול'],
   ['תקשורת פנים־ארגונית', /internal (comms|communications)|employee communications|תקשורת פנים/i, 'תקשורת פנים־ארגונית וכתיבת תוכן'],
   ['ניהול משרד ותפעול מקום העבודה', /office (manager|management|coordination|coordinator|admin(?:istrator)?|operations)|workplace (manager|coordination|coordinator|operations|services)|(?:מנהל|רכז|מתאמ).{0,6} משרד|תיאום משרד/i, 'תפעול מקום העבודה ותיאום יוזמות'],
-  ['תוכן וסושיאל', /social media|content (market|creat|strateg|manager|specialist|writer|lead|coordinator)|creative content|copywriter|storyteller|סושיאל|מנהל.{0,3} תוכן/i, 'תוכן, עיצוב ושיווק דיגיטלי'],
-  ['שיווק ותפעול', /marketing (coordinator|operations|associate|specialist)|רכז.{0,3} שיווק/i, 'תיאום שיווקי ועבודה עם צוותים שונים'],
+  ['תוכן וסושיאל', /social media|content (market|creat|strateg|manager|specialist|writer|lead|coordinator)|creative content|copywriter|storyteller|סושיאל|מדיה חברתית|(?:מנהל|יוצר|עורכ|כותב).{0,5} תוכן|יצירת תוכן/i, 'תוכן, עיצוב ושיווק דיגיטלי'],
+  ['שיווק ותפעול', /employer brand|מיתוג מעסיק|marketing (coordinator|operations|associate|specialist)|(?:רכז|תיאום).{0,5} שיווק/i, 'תיאום שיווקי ועבודה עם צוותים שונים'],
   ['תפעול משאבי אנוש', /hr (operations|coordinator|administrator)|human resources (operations|coordinator)/i, 'תפעול חוויית עובד ועבודה עם צוותים שונים'],
   ['הסברה ותקשורת ציבורית', /\b(?:hasbara|public diplomacy|public affairs|public communications?|communications and advocacy)\b|הסברה|דוברות/i, 'הסברה, כתיבת תוכן ותקשורת עם קהלים']
 ].freeze
@@ -24,9 +24,9 @@ RESPONSIBILITY = /\b(?:manage|coordinate|lead|create|produce|write|develop|own|o
 DUTY_RULES = [
   [6, /public diplomacy|public awareness campaigns|public advocacy campaigns|hasbara|הסברה|דוברות/i],
   [1, /internal communications?|employee communications?|employee newsletters?|תקשורת פנים/i],
-  [0, /employee (experience|engagement|welfare|lifecycle|events|services)|culture initiatives|onboarding and offboarding|חוויית עובד|רווחת עובדים/i],
+  [0, /employee (experience|engagement|welfare|lifecycle|events|services|wellbeing)|(?:company|office|team|employee|internal) events|team[ -]building|(?:workplace|company|organizational) culture|culture initiatives|onboarding|offboarding|חווי[יי]?ת עובד|רווחת עובד|אירועי (?:חברה|עובדים|צוות)|קליטת עובדים|תרבות ארגונית/i],
   [3, /social media|content creation|content strategy|website content|creative content|storytelling|copywriting|newsletters|סושיאל|יצירת תוכן/i],
-  [4, /marketing operations|coordinate marketing campaigns|marketing automation|תפעול שיווק/i],
+  [4, /employer brand|marketing operations|(?:coordinate|manage|create|execute) marketing campaigns|marketing automation|מיתוג מעסיק|תפעול שיווק/i],
   [5, /people operations|hr operations|HRIS|משאבי אנוש/i]
 ].freeze
 
@@ -64,29 +64,45 @@ end
 
 def employment_type(text)
   case text
-  when /maternity (leave|cover|replacement)|חופשת לידה/i then 'החלפה לחופשת לידה'
+  when /maternity[- ](?:leave|cover|replacement)|parental leave cover|חופשת לידה|חל["״']?ד/i then 'החלפה לחופשת לידה'
   when /fixed[ -]term|\b\d+[ -]months? (contract|position)|חוזה לתקופה/i then 'חוזה לתקופה מוגדרת'
-  when /\btemporary\b|משרה זמנית/i then 'זמנית (Temp)'
+  when /\b(?:temporary|temp)\b|משרה זמנית|החלפה זמנית|תפקיד זמני/i then 'זמנית (Temp)'
   when /\bpermanent (?:role|position|contract|employment)\b|משרה קבועה/i then 'קבועה'
   when /\bfreelance\b/i then 'פרויקט / פרילנס'
   end
 end
 
-def job_from(raw, source, timestamp)
+def job_from(raw, source, timestamp, excluded = Hash.new(0))
   title = raw.fetch('title').gsub(/[[:space:]]+/, ' ').strip
-  return if title.match?(/personal assistant|executive assistant|cto office|ceo office/i)
-  return if title.match?(/\bproduct market(?:ing|er)\b|שיווק מוצר/i)
   rule = RULES.find { |_, pattern, _| title.match?(pattern) }
-  return unless rule || title.match?(GENERAL_TITLE)
+  exclusion = if title.match?(/personal assistant|executive assistant|cto office|ceo office|עוזר.{0,5} אישי/i) && !rule.equal?(RULES[2])
+                'assistant_title'
+              elsif title.match?(/\bproduct market(?:ing|er)\b|שיווק מוצר/i)
+                'product_marketing'
+              elsif !rule && !title.match?(GENERAL_TITLE)
+                'unrelated_title'
+              end
+  if exclusion
+    excluded[exclusion] += 1
+    return
+  end
 
   ashby = source['provider'] == 'Ashby'
   location = ashby ? raw['location'] : raw.dig('location', 'name')
   location = Array(raw['secondaryLocations']).find { |item| item.to_s.match?(ISRAEL) } unless location.to_s.match?(ISRAEL)
-  return unless location.to_s.match?(ISRAEL)
+  unless location.to_s.match?(ISRAEL)
+    excluded['location_outside_israel_or_unknown'] += 1
+    return
+  end
   url = normalized_url(raw[ashby ? 'jobUrl' : 'absolute_url'])
-  return unless url
-
-  return if ashby && raw['isListed'] == false
+  unless url
+    excluded['invalid_posting_url'] += 1
+    return
+  end
+  if raw['isListed'] == false
+    excluded['not_publicly_listed'] += 1
+    return
+  end
 
   lines = clean(raw[ashby ? 'descriptionHtml' : 'content'])
   requirements = lines.index { |line| line.match?(/\A(?:requirements|what you.ll bring|qualifications|what you bring|what you need|the ideal candidate should have|about you|דרישות)\b/i) }
@@ -106,7 +122,10 @@ def job_from(raw, source, timestamp)
     office_operations = rule.equal?(RULES[2]) && candidates.any? do |line|
       line.match?(/office logistics|office events|office supplies|facilities|vendor relationships|vendors|ספקים|לוגיסטיקה/i)
     end
-    return unless matched || office_operations
+    unless matched || office_operations
+      excluded[rule ? 'no_relevant_office_duties' : 'no_relevant_duties'] += 1
+      return
+    end
     rule ||= RULES[matched.first]
   end
   role_lines = duties ? lines.drop(duties + 1).take(2) : lines.select { |line| line.match?(/\b(you will|you.ll|responsible for)\b/i) }.take(2)
@@ -198,7 +217,10 @@ def discover(sources, previous, timestamp)
     key = source.values_at('provider', 'board').join('/')
     begin
       raw = read_board(source)
-      live = raw.map { |item| job_from(item, source, timestamp) }.compact
+      excluded = Hash.new(0)
+      live = raw.map { |item| job_from(item, source, timestamp, excluded) }.compact
+      duplicates = 0
+      added = 0
       jobs.each_value do |job|
         job['active'] = false if job.values_at('source', 'board').join('/') == key && !matched_ids[job['id']]
       end
@@ -207,15 +229,26 @@ def discover(sources, previous, timestamp)
         id = seen_urls[job['url']] || seen_roles[role] || job['id']
         seen_urls[job['url']] = id
         seen_roles[role] = id
-        next if matched_ids[id]
+        if matched_ids[id]
+          duplicates += 1
+          next
+        end
         prior = jobs[id]
+        if prior
+          duplicates += 1
+        else
+          added += 1
+        end
         job['id'] = id
         job['discoveredAt'] = prior['discoveredAt'] if prior
         jobs[id] = job
         matched_ids[id] = true
       end
-      status[key] = { 'success' => true, 'read' => raw.size, 'matched' => live.size }
-      puts "#{key}: #{raw.size} postings, #{live.size} matched"
+      status[key] = {
+        'success' => true, 'read' => raw.size, 'matched' => live.size,
+        'duplicates' => duplicates, 'added' => added, 'excluded' => excluded
+      }
+      puts "#{key}: #{JSON.generate(status[key])}"
     rescue DiscoveryDeadline
       raise
     rescue StandardError => error
