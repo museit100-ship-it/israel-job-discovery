@@ -220,7 +220,7 @@
     "board": "tonkean",
     "company": "Tonkean",
     "industry": "אוטומציה ארגונית",
-    "description": "תוכנה לאוטומציה של תהליכי עבודה.",
+    "description": "מפתחת תוכנה שמרכזת בקשות רכש, מנתבת אותן לאישור ומחברת בין מערכות הרכש והספקים של הארגון.",
     "website": "https://www.tonkean.com/"
   },
   {
@@ -244,7 +244,7 @@
     "board": "Zadara",
     "company": "Zadara",
     "industry": "תשתיות ענן",
-    "description": "שירותי ענן ותשתיות מחשוב.",
+    "description": "מספקת לספקי שירות תשתית ענן מנוהלת להפעלת שרתים וירטואליים, רשתות ואחסון נתונים.",
     "website": "https://www.zadara.com/"
   }
 ]
