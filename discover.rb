@@ -216,6 +216,10 @@ def discover(sources, previous, timestamp)
   sources.each do |source|
     key = source.values_at('provider', 'board').join('/')
     begin
+      description = source['description']
+      if !description.is_a?(String) || description.strip.empty? || description.strip == source['industry'].to_s.strip
+        raise ArgumentError, 'Source requires a company description beyond its industry label'
+      end
       raw = read_board(source)
       excluded = Hash.new(0)
       live = raw.map { |item| job_from(item, source, timestamp, excluded) }.compact
