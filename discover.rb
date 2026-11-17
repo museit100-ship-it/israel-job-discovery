@@ -72,10 +72,19 @@ def employment_type(text)
   end
 end
 
+PERSONAL_ASSISTANT_ROLE = %r{\b(?:personal assistant|personal aide|p\.?a\.?\s+to|(?:office manager|assistant)\s*(?:[/&+-]|and)\s*p\.?a\.?(?:\s|$)|secretary(?: and)? personal assistant)\b|עוזר(?:ת|[/.\s]ת)?\s+אישי(?:ת|[/.\s]ת)?}i
+JOB_NOTICE_PATTERNS = {
+  'travel' => %r{\b(?:travel (?:arrangements|coordination|logistics|booking|scheduling)|(?:book(?:s|ed|ing)?|(?:coordinat|arrang|manag|organiz|organis)(?:e|es|ed|ing))\s+(?:(?:business|corporate|executive|international|domestic)\s+)?(?:travel|flights|trips))\b|(?:תיאום|ניהול|ארגון|הזמנת)\s+(?:של\s+)?(?:נסיעות|טיסות)}i,
+  'ceo_calendar' => %r{\b(?:ceo(?:['’]s)? (?:calendar|diary|schedule)|(?:calendar|diary|schedule) (?:management )?(?:for|of) (?:the )?ceo)\b|(?:ניהול|תיאום)\s+(?:ה)?יומן\s+(?:של\s+)?(?:ה)?מנכ[״"׳']?ל}i,
+  'personal_support' => %r{\b(?:personal (?:support|assistance|errands|appointments|tasks)|support (?:the )?(?:ceo|executives?|leadership) (?:with|on) personal)\b|תמיכה אישית|סיוע אישי|סידורים אישיים|משימות אישיות}i,
+  'portfolio' => %r{\b(?:(?:submit|include|provide|attach|share|send|link to)\s+(?:(?:a|your|an)\s+)?(?:creative\s+|design\s+|writing\s+)?portfolio|portfolio\s+(?:is\s+)?(?:required|mandatory)|(?:creative|design|writing) portfolio|portfolio of (?:your )?(?:work|writing|designs?))\b|תיק עבודות|דוגמאות כתיבה}i
+}.freeze
+
 def job_from(raw, source, timestamp, excluded = Hash.new(0))
   title = raw.fetch('title').gsub(/[[:space:]]+/, ' ').strip
   rule = RULES.find { |_, pattern, _| title.match?(pattern) }
-  exclusion = if title.match?(/personal assistant|executive assistant|cto office|ceo office|עוזר.{0,5} אישי/i) && !rule.equal?(RULES[2])
+  exclusion = if title.match?(PERSONAL_ASSISTANT_ROLE) ||
+                 (title.match?(/executive assistant|cto office|ceo office/i) && !rule.equal?(RULES[2]))
                 'assistant_title'
               elsif title.match?(/\bproduct market(?:ing|er)\b|שיווק מוצר/i)
                 'product_marketing'
@@ -105,6 +114,12 @@ def job_from(raw, source, timestamp, excluded = Hash.new(0))
   end
 
   lines = clean(raw[ashby ? 'descriptionHtml' : 'content'])
+  if lines.any? { |line| line.match?(/\b(?:role|position|work|serve)\s+(?:is\s+)?(?:primarily\s+)?as\s+(?:an?\s+)?personal assistant\b|\b(?:looking|seeking|hiring)\s+for\s+(?:an?\s+)?personal assistant\b|התפקיד\s+הוא\s+עוזר(?:ת)?\s+אישי(?:ת)?/i) }
+    excluded['personal_assistant_role'] += 1
+    return
+  end
+  posting_text = [title, *lines].join(' ')
+  notices = JOB_NOTICE_PATTERNS.keys.select { |notice| posting_text.match?(JOB_NOTICE_PATTERNS.fetch(notice)) }
   requirements = lines.index { |line| line.match?(/\A(?:requirements|what you.ll bring|qualifications|what you bring|what you need|the ideal candidate should have|about you|דרישות)\b/i) }
   duties = lines.index { |line| line.match?(/\A(?:responsibilities|what you.ll do|what you will do|what will you be doing|your impact|תחומי אחריות)\b/i) }
   body = requirements ? lines.take(requirements) : lines
@@ -151,6 +166,7 @@ def job_from(raw, source, timestamp, excluded = Hash.new(0))
     'industry' => source.fetch('industry'), 'companyDescription' => source.fetch('description'),
     'website' => source.fetch('website'), 'category' => rule[0],
     'summary' => role_lines.map { |line| line[0, 260] }.join(' '),
+    'notices' => notices,
     'requirements' => requirements ? lines.drop(requirements + 1).take(2).join(' ')[0, 450] : nil,
     'workCondition' => condition&.slice(0, 260),
     'score' => score, 'match' => "#{match_basis} מצביעים על זיקה לתחום #{rule[2]} (#{base_score} נקודות)#{central ? ' והמיקום במרכז (10 נקודות)' : ''}.",
