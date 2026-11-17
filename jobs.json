@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-16T11:20:50Z",
-  "lastSuccessfulAt": "2026-11-16T11:20:50Z",
+  "attemptedAt": "2026-11-17T09:39:46Z",
+  "lastSuccessfulAt": "2026-11-17T09:39:46Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
-      "read": 111,
+      "read": 107,
       "matched": 0
     },
     "Greenhouse/via": {
       "success": true,
-      "read": 176,
+      "read": 172,
       "matched": 0
     },
     "Greenhouse/catonetworks": {
       "success": true,
-      "read": 115,
+      "read": 117,
       "matched": 0
     },
     "Greenhouse/forter": {
@@ -30,7 +30,7 @@
     },
     "Greenhouse/similarweb": {
       "success": true,
-      "read": 60,
+      "read": 62,
       "matched": 1
     },
     "Greenhouse/appsflyer": {
@@ -45,13 +45,13 @@
     },
     "Ashby/semperis": {
       "success": true,
-      "read": 23,
+      "read": 24,
       "matched": 2
     },
     "Ashby/matia": {
       "success": true,
-      "read": 6,
-      "matched": 1
+      "read": 5,
+      "matched": 0
     },
     "Ashby/mend-io": {
       "success": true,
@@ -65,7 +65,7 @@
     },
     "Greenhouse/honeycombinsurance": {
       "success": true,
-      "read": 13,
+      "read": 12,
       "matched": 0
     },
     "Ashby/chamelio": {
@@ -75,12 +75,12 @@
     },
     "Ashby/voodoo": {
       "success": true,
-      "read": 103,
+      "read": 102,
       "matched": 0
     },
     "Greenhouse/2k": {
       "success": true,
-      "read": 90,
+      "read": 89,
       "matched": 0
     },
     "Greenhouse/neosecurityinc": {
@@ -90,7 +90,7 @@
     },
     "Greenhouse/torq": {
       "success": true,
-      "read": 22,
+      "read": 26,
       "matched": 0
     },
     "Greenhouse/axonius": {
@@ -115,12 +115,12 @@
     },
     "Greenhouse/elastic": {
       "success": true,
-      "read": 400,
+      "read": 387,
       "matched": 0
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 75,
+      "read": 78,
       "matched": 0
     },
     "Greenhouse/optimove": {
@@ -130,12 +130,12 @@
     },
     "Greenhouse/fireblocks": {
       "success": true,
-      "read": 22,
+      "read": 23,
       "matched": 0
     },
     "Greenhouse/taboola": {
       "success": true,
-      "read": 68,
+      "read": 67,
       "matched": 0
     },
     "Lever/tonkean": {
@@ -145,12 +145,12 @@
     },
     "Lever/lendbuzz": {
       "success": true,
-      "read": 53,
+      "read": 51,
       "matched": 0
     },
     "Lever/airslate": {
       "success": true,
-      "read": 17,
+      "read": 16,
       "matched": 1
     },
     "Lever/Zadara": {
@@ -183,7 +183,7 @@
       "workCondition": null,
       "score": 85,
       "match": "כותרת המשרה מצביעים על זיקה לתחום תפעול מקום העבודה ותיאום יוזמות (75 נקודות) והמיקום במרכז (10 נקודות).",
-      "active": true
+      "active": false
     },
     {
       "id": "96f9d711901024e5ccb2fe82",
@@ -195,7 +195,7 @@
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -220,7 +220,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -245,7 +245,7 @@
       "board": "tonkean",
       "sourceId": "21b00ce8-3b3c-47b7-8c58-b20e2146aa32",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": null,
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": null,
@@ -270,7 +270,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -295,7 +295,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -320,7 +320,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -345,7 +345,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-16T11:20:50Z",
+      "verifiedAt": "2026-11-17T09:39:46Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
