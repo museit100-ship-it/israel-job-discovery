@@ -1,162 +1,352 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-17T09:39:46Z",
-  "lastSuccessfulAt": "2026-11-17T09:39:46Z",
+  "attemptedAt": "2026-11-18T12:05:29Z",
+  "lastSuccessfulAt": "2026-11-18T12:05:29Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
-      "read": 107,
-      "matched": 0
+      "read": 104,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 93,
+        "location_outside_israel_or_unknown": 4,
+        "no_relevant_duties": 2,
+        "product_marketing": 3,
+        "assistant_title": 2
+      }
     },
     "Greenhouse/via": {
       "success": true,
-      "read": 172,
-      "matched": 0
+      "read": 174,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 130,
+        "location_outside_israel_or_unknown": 44
+      }
     },
     "Greenhouse/catonetworks": {
       "success": true,
-      "read": 117,
-      "matched": 0
+      "read": 118,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 111,
+        "product_marketing": 2,
+        "location_outside_israel_or_unknown": 2,
+        "no_relevant_duties": 3
+      }
     },
     "Greenhouse/forter": {
       "success": true,
       "read": 19,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 19
+      }
     },
     "Greenhouse/riskified": {
       "success": true,
-      "read": 42,
-      "matched": 0
+      "read": 43,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 40,
+        "location_outside_israel_or_unknown": 1,
+        "no_relevant_duties": 1,
+        "product_marketing": 1
+      }
     },
     "Greenhouse/similarweb": {
       "success": true,
-      "read": 62,
-      "matched": 1
+      "read": 64,
+      "matched": 1,
+      "duplicates": 1,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 59,
+        "location_outside_israel_or_unknown": 3,
+        "no_relevant_duties": 1
+      }
     },
     "Greenhouse/appsflyer": {
       "success": true,
-      "read": 55,
-      "matched": 0
+      "read": 56,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 51,
+        "location_outside_israel_or_unknown": 4,
+        "no_relevant_duties": 1
+      }
     },
     "Ashby/deel": {
       "success": true,
       "read": 0,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+      }
     },
     "Ashby/semperis": {
       "success": true,
-      "read": 24,
-      "matched": 2
+      "read": 28,
+      "matched": 2,
+      "duplicates": 2,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 26
+      }
     },
     "Ashby/matia": {
       "success": true,
       "read": 5,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 5
+      }
     },
     "Ashby/mend-io": {
       "success": true,
       "read": 9,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 7,
+        "location_outside_israel_or_unknown": 1,
+        "product_marketing": 1
+      }
     },
     "Greenhouse/eleoshealth": {
       "success": true,
       "read": 19,
-      "matched": 1
+      "matched": 1,
+      "duplicates": 1,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 16,
+        "location_outside_israel_or_unknown": 1,
+        "product_marketing": 1
+      }
     },
     "Greenhouse/honeycombinsurance": {
       "success": true,
       "read": 12,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 10,
+        "location_outside_israel_or_unknown": 2
+      }
     },
     "Ashby/chamelio": {
       "success": true,
       "read": 17,
-      "matched": 1
+      "matched": 1,
+      "duplicates": 1,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 14,
+        "product_marketing": 1,
+        "no_relevant_duties": 1
+      }
     },
     "Ashby/voodoo": {
       "success": true,
-      "read": 102,
-      "matched": 0
+      "read": 103,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 85,
+        "location_outside_israel_or_unknown": 18
+      }
     },
     "Greenhouse/2k": {
       "success": true,
-      "read": 89,
-      "matched": 0
+      "read": 83,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 76,
+        "product_marketing": 2,
+        "location_outside_israel_or_unknown": 5
+      }
     },
     "Greenhouse/neosecurityinc": {
       "success": true,
       "read": 21,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 16,
+        "location_outside_israel_or_unknown": 5
+      }
     },
     "Greenhouse/torq": {
       "success": true,
-      "read": 26,
-      "matched": 0
+      "read": 27,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 27
+      }
     },
     "Greenhouse/axonius": {
       "success": true,
       "read": 22,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 19,
+        "product_marketing": 1,
+        "location_outside_israel_or_unknown": 1,
+        "assistant_title": 1
+      }
     },
     "Greenhouse/armissecurity": {
       "success": true,
       "read": 0,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+      }
     },
     "Greenhouse/gongio": {
       "success": true,
-      "read": 89,
-      "matched": 0
+      "read": 87,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 81,
+        "location_outside_israel_or_unknown": 4,
+        "product_marketing": 2
+      }
     },
     "Greenhouse/lightricks": {
       "success": true,
       "read": 0,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+      }
     },
     "Greenhouse/elastic": {
       "success": true,
-      "read": 387,
-      "matched": 0
+      "read": 379,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 363,
+        "location_outside_israel_or_unknown": 15,
+        "product_marketing": 1
+      }
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 78,
-      "matched": 0
+      "read": 77,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 73,
+        "location_outside_israel_or_unknown": 3,
+        "no_relevant_duties": 1
+      }
     },
     "Greenhouse/optimove": {
       "success": true,
       "read": 6,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 6
+      }
     },
     "Greenhouse/fireblocks": {
       "success": true,
-      "read": 23,
-      "matched": 0
+      "read": 27,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 27
+      }
     },
     "Greenhouse/taboola": {
       "success": true,
-      "read": 67,
-      "matched": 0
+      "read": 59,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 53,
+        "location_outside_israel_or_unknown": 5,
+        "no_relevant_duties": 1
+      }
     },
     "Lever/tonkean": {
       "success": true,
-      "read": 2,
-      "matched": 1
+      "read": 1,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 1
+      }
     },
     "Lever/lendbuzz": {
       "success": true,
-      "read": 51,
-      "matched": 0
+      "read": 50,
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 50
+      }
     },
     "Lever/airslate": {
       "success": true,
-      "read": 16,
-      "matched": 1
+      "read": 15,
+      "matched": 1,
+      "duplicates": 1,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 13,
+        "product_marketing": 1
+      }
     },
     "Lever/Zadara": {
       "success": true,
       "read": 8,
-      "matched": 0
+      "matched": 0,
+      "duplicates": 0,
+      "added": 0,
+      "excluded": {
+        "unrelated_title": 8
+      }
     }
   },
   "jobs": [
@@ -189,13 +379,13 @@
       "id": "96f9d711901024e5ccb2fe82",
       "title": "Senior Content Manager",
       "company": "airSlate",
-      "location": "Israel",
+      "location": "Tel Aviv",
       "url": "https://jobs.lever.co/airslate/65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "source": "Lever",
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-17T09:39:46Z",
+      "verifiedAt": "2026-11-18T12:05:29Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -204,10 +394,13 @@
       "website": "https://www.airslate.com/",
       "category": "תוכן וסושיאל",
       "summary": "As Senior Content Manager, you will own content end to end, from brief to production, publishing, and optimization, working closely with the Principal Product Marketing Manager with direct line of sight into product strategy and launches. What you'll be working on:",
+      "notices": [
+
+      ],
       "requirements": null,
       "workCondition": null,
-      "score": 75,
-      "match": "כותרת המשרה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (75 נקודות).",
+      "score": 85,
+      "match": "כותרת המשרה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (75 נקודות) והמיקום במרכז (10 נקודות).",
       "active": true
     },
     {
@@ -220,15 +413,18 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-17T09:39:46Z",
+      "verifiedAt": "2026-11-18T12:05:29Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
-      "workSchedule": "FullTime",
+      "workSchedule": "PartTime",
       "industry": "טכנולוגיה משפטית",
       "companyDescription": "מפתחת כלים מבוססי AI לצוותים משפטיים בארגונים.",
       "website": "https://chamelio.ai/",
       "category": "ניהול משרד ותפעול מקום העבודה",
       "summary": "Office & Workplace Operations: Manage daily operations of our Tel Aviv office, including facilities, vendors, supplies, deliveries, and office budgets, proactively solving operational needs. Travel Management: Own end-to-end domestic and international travel logistics (flights, hotels, visas, ground transport) across time zones, resolving last-minute changes within company policy and budget.",
+      "notices": [
+        "travel"
+      ],
       "requirements": null,
       "workCondition": null,
       "score": 85,
@@ -258,7 +454,7 @@
       "workCondition": null,
       "score": 75,
       "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום חוויית עובד, מעורבות עובדים ותפעול (65 נקודות) והמיקום במרכז (10 נקודות).",
-      "active": true
+      "active": false
     },
     {
       "id": "bb67dcac60f3ad2ced2f9b11",
@@ -270,7 +466,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-17T09:39:46Z",
+      "verifiedAt": "2026-11-18T12:05:29Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -279,6 +475,9 @@
       "website": "https://eleos.health/",
       "category": "חוויית עובד ותרבות",
       "summary": "Support key People processes including performance management, compensation cycles, talent reviews, engagement, and organizational changes. Help keep the People team’s priorities and projects organized, visible, and moving forward.",
+      "notices": [
+
+      ],
       "requirements": "4+ years of experience in People Operations, HR Operations, project management, business operations, or a similar role. Exceptional organization and follow-through — you naturally keep track of details, owners, deadlines, and next steps.",
       "workCondition": null,
       "score": 85,
@@ -295,7 +494,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-17T09:39:46Z",
+      "verifiedAt": "2026-11-18T12:05:29Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -304,6 +503,9 @@
       "website": "https://www.similarweb.com/",
       "category": "חוויית עובד ותרבות",
       "summary": "Oversee the employee journey, addressing both professional and personal aspects to ensure a well-rounded and fulfilling experience, including full employee lifecycle management (from onboarding to offboarding). Manage ongoing employee experience touchpoints, including support for employees through meaningful life moments—from joyful occasions such as birthdays, weddings, and newborns to more sensitive times like illness and condolences - ensuring care, empathy, and a",
+      "notices": [
+
+      ],
       "requirements": "At least 1 year of relevant experience as an Employee Experience Specialist and/or HR Administrator – advantage for experience in the high-tech industry. Flexibility and the ability to work in a fast-paced, entrepreneurial, and demanding environment.",
       "workCondition": "This position is part-time (50%) and requires on-site presence 5 days a week in half-day shifts.",
       "score": 85,
@@ -320,7 +522,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-17T09:39:46Z",
+      "verifiedAt": "2026-11-18T12:05:29Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -329,6 +531,9 @@
       "website": "https://semperis.com/",
       "category": "חוויית עובד ותרבות",
       "summary": "Support employee lifecycle processes, including onboarding, offboarding, employee changes, and documentation. We’re looking for an HR Generalist for a 12-month maternity leave replacement who brings together a strong people focus and a solid HR Operations mindset. In this role, you will support employees and managers with day-to-day HR needs while also taking ownershi",
+      "notices": [
+
+      ],
       "requirements": "3+ years of experience in a similar role: Experience providing employee-focused HR support across the employee lifecycle.",
       "workCondition": null,
       "score": 75,
@@ -345,7 +550,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-17T09:39:46Z",
+      "verifiedAt": "2026-11-18T12:05:29Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -354,6 +559,9 @@
       "website": "https://semperis.com/",
       "category": "ניהול משרד ותפעול מקום העבודה",
       "summary": "We are looking for a highly organized and resourceful Office Manager to oversee all aspects of office operations and logistics. You will manage vendor relationships, facilities, supplies, employee services, and ensure that the office runs efficiently across mu Oversee day-to-day office operations, including supplies, equipment, and catering",
+      "notices": [
+
+      ],
       "requirements": null,
       "workCondition": "Location: Israel – Onsite Ramat Gan- 5 days per week",
       "score": 85,
@@ -385,5 +593,11 @@
       "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (65 נקודות) והמיקום במרכז (10 נקודות).",
       "active": false
     }
-  ]
+  ],
+  "lastExecution": {
+    "trigger": "manual",
+    "outcome": "succeeded",
+    "finishedAt": "2026-11-18T12:06:21Z",
+    "runId": "bcd56ebc-debd-4cbb-95a8-9ed80b7eb5e2"
+  }
 }
