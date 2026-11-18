@@ -320,7 +320,15 @@ def run_discovery(output)
   unless fixtures
     run_id = discovery_rpc('claim_discovery_run', { 'p_trigger' => trigger })
     unless run_id
-      puts 'Discovery skipped by the database execution guard.'
+      puts '::warning::Discovery skipped by the database execution guard; no sources were scanned.'
+      if File.exist?(output)
+        previous = JSON.parse(File.read(output))
+        previous['lastExecution'] = {
+          'trigger' => trigger, 'outcome' => 'skipped', 'finishedAt' => Time.now.utc.iso8601,
+          'message' => 'Database guard denied execution; quota, time window, or an active run.'
+        }
+        write_feed(output, previous)
+      end
       return 0
     end
   end
@@ -351,6 +359,14 @@ def run_discovery(output)
     end
   end
   warn details['error'] if details['error']
+  if File.exist?(output)
+    current = JSON.parse(File.read(output))
+    current['lastExecution'] = {
+      'trigger' => trigger, 'outcome' => outcome, 'finishedAt' => Time.now.utc.iso8601,
+      'runId' => run_id
+    }.compact
+    write_feed(output, current)
+  end
   outcome == 'succeeded' ? 0 : 1
 end
 
