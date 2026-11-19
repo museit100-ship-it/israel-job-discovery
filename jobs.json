@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-18T17:00:00Z",
-  "lastSuccessfulAt": "2026-11-18T17:00:00Z",
+  "attemptedAt": "2026-11-19T17:01:20Z",
+  "lastSuccessfulAt": "2026-11-19T17:01:20Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
-      "read": 104,
-      "matched": 0,
+      "read": 107,
+      "matched": 1,
       "duplicates": 0,
-      "added": 0,
+      "added": 1,
       "excluded": {
-        "unrelated_title": 93,
+        "unrelated_title": 94,
         "location_outside_israel_or_unknown": 4,
         "no_relevant_duties": 2,
-        "product_marketing": 3,
-        "assistant_title": 2
+        "assistant_title": 3,
+        "product_marketing": 3
       }
     },
     "Greenhouse/via": {
@@ -30,13 +30,13 @@
     },
     "Greenhouse/catonetworks": {
       "success": true,
-      "read": 118,
+      "read": 119,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
         "unrelated_title": 111,
-        "product_marketing": 2,
+        "product_marketing": 3,
         "location_outside_israel_or_unknown": 2,
         "no_relevant_duties": 3
       }
@@ -53,12 +53,12 @@
     },
     "Greenhouse/riskified": {
       "success": true,
-      "read": 42,
+      "read": 44,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 39,
+        "unrelated_title": 41,
         "location_outside_israel_or_unknown": 1,
         "no_relevant_duties": 1,
         "product_marketing": 1
@@ -66,24 +66,24 @@
     },
     "Greenhouse/similarweb": {
       "success": true,
-      "read": 64,
+      "read": 63,
       "matched": 1,
       "duplicates": 1,
       "added": 0,
       "excluded": {
-        "unrelated_title": 59,
+        "unrelated_title": 58,
         "location_outside_israel_or_unknown": 3,
         "no_relevant_duties": 1
       }
     },
     "Greenhouse/appsflyer": {
       "success": true,
-      "read": 56,
+      "read": 57,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 51,
+        "unrelated_title": 52,
         "location_outside_israel_or_unknown": 4,
         "no_relevant_duties": 1
       }
@@ -189,35 +189,34 @@
     },
     "Greenhouse/neosecurityinc": {
       "success": true,
-      "read": 22,
+      "read": 21,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 17,
+        "unrelated_title": 16,
         "location_outside_israel_or_unknown": 5
       }
     },
     "Greenhouse/torq": {
       "success": true,
-      "read": 27,
+      "read": 30,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 27
+        "unrelated_title": 30
       }
     },
     "Greenhouse/axonius": {
       "success": true,
-      "read": 22,
+      "read": 20,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 19,
+        "unrelated_title": 18,
         "product_marketing": 1,
-        "location_outside_israel_or_unknown": 1,
         "assistant_title": 1
       }
     },
@@ -232,12 +231,12 @@
     },
     "Greenhouse/gongio": {
       "success": true,
-      "read": 85,
+      "read": 87,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 79,
+        "unrelated_title": 81,
         "location_outside_israel_or_unknown": 4,
         "product_marketing": 2
       }
@@ -253,24 +252,24 @@
     },
     "Greenhouse/elastic": {
       "success": true,
-      "read": 374,
+      "read": 372,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 358,
-        "location_outside_israel_or_unknown": 15,
+        "unrelated_title": 355,
+        "location_outside_israel_or_unknown": 16,
         "product_marketing": 1
       }
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 77,
+      "read": 76,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 73,
+        "unrelated_title": 72,
         "location_outside_israel_or_unknown": 3,
         "no_relevant_duties": 1
       }
@@ -287,22 +286,23 @@
     },
     "Greenhouse/fireblocks": {
       "success": true,
-      "read": 27,
+      "read": 28,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 27
+        "unrelated_title": 27,
+        "location_outside_israel_or_unknown": 1
       }
     },
     "Greenhouse/taboola": {
       "success": true,
-      "read": 59,
+      "read": 58,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 53,
+        "unrelated_title": 52,
         "location_outside_israel_or_unknown": 5,
         "no_relevant_duties": 1
       }
@@ -319,12 +319,12 @@
     },
     "Lever/lendbuzz": {
       "success": true,
-      "read": 50,
+      "read": 49,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 50
+        "unrelated_title": 49
       }
     },
     "Lever/airslate": {
@@ -350,6 +350,34 @@
     }
   },
   "jobs": [
+    {
+      "id": "333bc2606a3e5433cb9c2d37",
+      "title": "Brand Designer Lead",
+      "company": "Wiz",
+      "location": "Tel Aviv",
+      "url": "https://www.wiz.io/careers/job/4621708006/:title?gh_jid=4621708006",
+      "source": "Greenhouse",
+      "board": "wizinc",
+      "sourceId": 4621708006,
+      "discoveredAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
+      "publishedAt": "2025-12-01T04:31:36-05:00",
+      "employmentType": null,
+      "workSchedule": null,
+      "industry": "סייבר",
+      "companyDescription": "פלטפורמה לזיהוי וניהול סיכוני אבטחה בסביבות ענן.",
+      "website": "https://www.wiz.io/",
+      "category": "תוכן וסושיאל",
+      "summary": "We are looking for a Brand Designer Lead. In this role, you will oversee the creation of marketing materials across various fields, from strategic brand initiatives, presentations, and collaterals to booth designs for global events, social media, and Wiz-relat Lead, mentor, and inspire a team of brand designers, fostering a culture of creative excellence, collaboration, and continuous growth.",
+      "notices": [
+
+      ],
+      "requirements": null,
+      "workCondition": null,
+      "score": 75,
+      "match": "תחומי אחריות במודעה מצביעים על זיקה לתחום תוכן, עיצוב ושיווק דיגיטלי (65 נקודות) והמיקום במרכז (10 נקודות).",
+      "active": true
+    },
     {
       "id": "35d60a5d621a75ce6bc82f15",
       "title": "Office & Workplace Operations Manager",
@@ -377,7 +405,7 @@
     },
     {
       "id": "96f9d711901024e5ccb2fe82",
-      "title": "Senior Content Manager",
+      "title": "Senior Content Specialist",
       "company": "airSlate",
       "location": "Tel Aviv",
       "url": "https://jobs.lever.co/airslate/65b92dec-8594-4b9e-afb0-59d79450f1ca",
@@ -385,7 +413,7 @@
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-18T17:00:00Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -413,7 +441,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-18T17:00:00Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "PartTime",
@@ -466,7 +494,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-18T17:00:00Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -494,7 +522,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-18T17:00:00Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -522,7 +550,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-18T17:00:00Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -550,7 +578,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-18T17:00:00Z",
+      "verifiedAt": "2026-11-19T17:01:20Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -597,7 +625,7 @@
   "lastExecution": {
     "trigger": "scheduled",
     "outcome": "succeeded",
-    "finishedAt": "2026-11-18T17:00:26Z",
-    "runId": "203abe67-a487-4146-a041-69ac2de64db0"
+    "finishedAt": "2026-11-19T17:01:46Z",
+    "runId": "fcb6fd3e-a211-43a3-965e-d4ba63c81561"
   }
 }
