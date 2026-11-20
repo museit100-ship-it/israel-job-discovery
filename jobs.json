@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-19T17:01:20Z",
-  "lastSuccessfulAt": "2026-11-19T17:01:20Z",
+  "attemptedAt": "2026-11-20T16:56:10Z",
+  "lastSuccessfulAt": "2026-11-20T16:56:10Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
-      "read": 107,
+      "read": 108,
       "matched": 1,
-      "duplicates": 0,
-      "added": 1,
+      "duplicates": 1,
+      "added": 0,
       "excluded": {
-        "unrelated_title": 94,
+        "unrelated_title": 95,
         "location_outside_israel_or_unknown": 4,
         "no_relevant_duties": 2,
         "assistant_title": 3,
@@ -24,8 +24,8 @@
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 130,
-        "location_outside_israel_or_unknown": 45
+        "unrelated_title": 129,
+        "location_outside_israel_or_unknown": 46
       }
     },
     "Greenhouse/catonetworks": {
@@ -35,30 +35,30 @@
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 111,
+        "unrelated_title": 110,
         "product_marketing": 3,
-        "location_outside_israel_or_unknown": 2,
+        "location_outside_israel_or_unknown": 3,
         "no_relevant_duties": 3
       }
     },
     "Greenhouse/forter": {
       "success": true,
-      "read": 19,
+      "read": 20,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 19
+        "unrelated_title": 20
       }
     },
     "Greenhouse/riskified": {
       "success": true,
-      "read": 44,
+      "read": 45,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 41,
+        "unrelated_title": 42,
         "location_outside_israel_or_unknown": 1,
         "no_relevant_duties": 1,
         "product_marketing": 1
@@ -78,12 +78,12 @@
     },
     "Greenhouse/appsflyer": {
       "success": true,
-      "read": 57,
+      "read": 56,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 52,
+        "unrelated_title": 51,
         "location_outside_israel_or_unknown": 4,
         "no_relevant_duties": 1
       }
@@ -99,12 +99,12 @@
     },
     "Ashby/semperis": {
       "success": true,
-      "read": 28,
+      "read": 29,
       "matched": 2,
       "duplicates": 2,
       "added": 0,
       "excluded": {
-        "unrelated_title": 26
+        "unrelated_title": 27
       }
     },
     "Ashby/matia": {
@@ -143,12 +143,12 @@
     },
     "Greenhouse/honeycombinsurance": {
       "success": true,
-      "read": 12,
+      "read": 11,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 10,
+        "unrelated_title": 9,
         "location_outside_israel_or_unknown": 2
       }
     },
@@ -166,13 +166,13 @@
     },
     "Ashby/voodoo": {
       "success": true,
-      "read": 103,
+      "read": 105,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 85,
-        "location_outside_israel_or_unknown": 18
+        "unrelated_title": 86,
+        "location_outside_israel_or_unknown": 19
       }
     },
     "Greenhouse/2k": {
@@ -189,13 +189,13 @@
     },
     "Greenhouse/neosecurityinc": {
       "success": true,
-      "read": 21,
+      "read": 20,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
         "unrelated_title": 16,
-        "location_outside_israel_or_unknown": 5
+        "location_outside_israel_or_unknown": 4
       }
     },
     "Greenhouse/torq": {
@@ -231,12 +231,12 @@
     },
     "Greenhouse/gongio": {
       "success": true,
-      "read": 87,
+      "read": 84,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 81,
+        "unrelated_title": 78,
         "location_outside_israel_or_unknown": 4,
         "product_marketing": 2
       }
@@ -252,24 +252,24 @@
     },
     "Greenhouse/elastic": {
       "success": true,
-      "read": 372,
+      "read": 373,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 355,
+        "unrelated_title": 356,
         "location_outside_israel_or_unknown": 16,
         "product_marketing": 1
       }
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 76,
+      "read": 77,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 72,
+        "unrelated_title": 73,
         "location_outside_israel_or_unknown": 3,
         "no_relevant_duties": 1
       }
@@ -286,12 +286,12 @@
     },
     "Greenhouse/fireblocks": {
       "success": true,
-      "read": 28,
+      "read": 29,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 27,
+        "unrelated_title": 28,
         "location_outside_israel_or_unknown": 1
       }
     },
@@ -360,7 +360,7 @@
       "board": "wizinc",
       "sourceId": 4621708006,
       "discoveredAt": "2026-11-19T17:01:20Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": "2025-12-01T04:31:36-05:00",
       "employmentType": null,
       "workSchedule": null,
@@ -413,7 +413,7 @@
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -441,7 +441,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "PartTime",
@@ -494,7 +494,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -522,7 +522,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -550,7 +550,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -578,7 +578,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-19T17:01:20Z",
+      "verifiedAt": "2026-11-20T16:56:10Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -625,7 +625,7 @@
   "lastExecution": {
     "trigger": "scheduled",
     "outcome": "succeeded",
-    "finishedAt": "2026-11-19T17:01:46Z",
-    "runId": "fcb6fd3e-a211-43a3-965e-d4ba63c81561"
+    "finishedAt": "2026-11-20T16:56:22Z",
+    "runId": "2f8fab40-f490-431d-8995-fb0ed81f6eb5"
   }
 }
