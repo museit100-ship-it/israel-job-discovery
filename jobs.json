@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-20T16:56:10Z",
-  "lastSuccessfulAt": "2026-11-20T16:56:10Z",
+  "attemptedAt": "2026-11-21T16:43:05Z",
+  "lastSuccessfulAt": "2026-11-21T16:43:05Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
@@ -19,23 +19,23 @@
     },
     "Greenhouse/via": {
       "success": true,
-      "read": 175,
+      "read": 173,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 129,
-        "location_outside_israel_or_unknown": 46
+        "unrelated_title": 128,
+        "location_outside_israel_or_unknown": 45
       }
     },
     "Greenhouse/catonetworks": {
       "success": true,
-      "read": 119,
+      "read": 120,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 110,
+        "unrelated_title": 111,
         "product_marketing": 3,
         "location_outside_israel_or_unknown": 3,
         "no_relevant_duties": 3
@@ -66,13 +66,13 @@
     },
     "Greenhouse/similarweb": {
       "success": true,
-      "read": 63,
+      "read": 59,
       "matched": 1,
       "duplicates": 1,
       "added": 0,
       "excluded": {
-        "unrelated_title": 58,
-        "location_outside_israel_or_unknown": 3,
+        "unrelated_title": 56,
+        "location_outside_israel_or_unknown": 1,
         "no_relevant_duties": 1
       }
     },
@@ -166,36 +166,36 @@
     },
     "Ashby/voodoo": {
       "success": true,
-      "read": 105,
+      "read": 104,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
         "unrelated_title": 86,
-        "location_outside_israel_or_unknown": 19
+        "location_outside_israel_or_unknown": 18
       }
     },
     "Greenhouse/2k": {
       "success": true,
-      "read": 83,
+      "read": 82,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 76,
+        "unrelated_title": 75,
         "product_marketing": 2,
         "location_outside_israel_or_unknown": 5
       }
     },
     "Greenhouse/neosecurityinc": {
       "success": true,
-      "read": 20,
+      "read": 19,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 16,
-        "location_outside_israel_or_unknown": 4
+        "location_outside_israel_or_unknown": 4,
+        "unrelated_title": 15
       }
     },
     "Greenhouse/torq": {
@@ -252,26 +252,27 @@
     },
     "Greenhouse/elastic": {
       "success": true,
-      "read": 373,
+      "read": 382,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 356,
-        "location_outside_israel_or_unknown": 16,
+        "unrelated_title": 368,
+        "location_outside_israel_or_unknown": 13,
         "product_marketing": 1
       }
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 77,
+      "read": 78,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
         "unrelated_title": 73,
         "location_outside_israel_or_unknown": 3,
-        "no_relevant_duties": 1
+        "no_relevant_duties": 1,
+        "product_marketing": 1
       }
     },
     "Greenhouse/optimove": {
@@ -286,12 +287,12 @@
     },
     "Greenhouse/fireblocks": {
       "success": true,
-      "read": 29,
+      "read": 28,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 28,
+        "unrelated_title": 27,
         "location_outside_israel_or_unknown": 1
       }
     },
@@ -360,7 +361,7 @@
       "board": "wizinc",
       "sourceId": 4621708006,
       "discoveredAt": "2026-11-19T17:01:20Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": "2025-12-01T04:31:36-05:00",
       "employmentType": null,
       "workSchedule": null,
@@ -413,7 +414,7 @@
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -441,7 +442,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "PartTime",
@@ -494,7 +495,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -522,7 +523,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -550,7 +551,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -578,7 +579,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-20T16:56:10Z",
+      "verifiedAt": "2026-11-21T16:43:05Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -625,7 +626,7 @@
   "lastExecution": {
     "trigger": "scheduled",
     "outcome": "succeeded",
-    "finishedAt": "2026-11-20T16:56:22Z",
-    "runId": "2f8fab40-f490-431d-8995-fb0ed81f6eb5"
+    "finishedAt": "2026-11-21T16:43:22Z",
+    "runId": "20899662-8d0f-4d6e-9e98-8ccd0570c684"
   }
 }
