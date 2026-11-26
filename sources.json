@@ -262,5 +262,13 @@
     "industry": "סייבר",
     "description": "מפתחת פלטפורמה להדמיית תקיפות ולבדיקת בקרות אבטחה.",
     "website": "https://cymulate.com/"
+  },
+  {
+    "provider": "Ashby",
+    "board": "pointfive",
+    "company": "PointFive",
+    "industry": "תשתיות ענן",
+    "description": "מפתחת כלים לאיתור ולצמצום עלויות ענן ותשתיות AI.",
+    "website": "https://www.pointfive.co/"
   }
 ]
