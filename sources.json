@@ -246,5 +246,21 @@
     "industry": "תשתיות ענן",
     "description": "מספקת לספקי שירות תשתית ענן מנוהלת להפעלת שרתים וירטואליים, רשתות ואחסון נתונים.",
     "website": "https://www.zadara.com/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "island",
+    "company": "Island",
+    "industry": "סייבר",
+    "description": "מפתחת דפדפן ארגוני עם בקרות אבטחה וניהול גישה.",
+    "website": "https://www.island.io/"
+  },
+  {
+    "provider": "Greenhouse",
+    "board": "cymulate",
+    "company": "Cymulate",
+    "industry": "סייבר",
+    "description": "מפתחת פלטפורמה להדמיית תקיפות ולבדיקת בקרות אבטחה.",
+    "website": "https://cymulate.com/"
   }
 ]
