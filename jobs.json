@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-26T17:04:28Z",
-  "lastSuccessfulAt": "2026-11-26T17:04:28Z",
+  "attemptedAt": "2026-11-27T17:03:25Z",
+  "lastSuccessfulAt": "2026-11-27T17:03:25Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
-      "read": 98,
+      "read": 100,
       "matched": 1,
       "duplicates": 1,
       "added": 0,
       "excluded": {
-        "unrelated_title": 84,
+        "unrelated_title": 86,
         "location_outside_israel_or_unknown": 6,
         "no_relevant_duties": 1,
         "assistant_title": 3,
@@ -98,12 +98,12 @@
     },
     "Ashby/semperis": {
       "success": true,
-      "read": 32,
+      "read": 31,
       "matched": 2,
       "duplicates": 2,
       "added": 0,
       "excluded": {
-        "unrelated_title": 30
+        "unrelated_title": 29
       }
     },
     "Ashby/matia": {
@@ -166,23 +166,23 @@
     },
     "Ashby/voodoo": {
       "success": true,
-      "read": 100,
+      "read": 106,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 83,
-        "location_outside_israel_or_unknown": 17
+        "unrelated_title": 90,
+        "location_outside_israel_or_unknown": 16
       }
     },
     "Greenhouse/2k": {
       "success": true,
-      "read": 85,
+      "read": 83,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 79,
+        "unrelated_title": 77,
         "location_outside_israel_or_unknown": 4,
         "product_marketing": 2
       }
@@ -252,24 +252,24 @@
     },
     "Greenhouse/elastic": {
       "success": true,
-      "read": 375,
+      "read": 369,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 359,
+        "unrelated_title": 353,
         "location_outside_israel_or_unknown": 15,
         "product_marketing": 1
       }
     },
     "Greenhouse/jfrog": {
       "success": true,
-      "read": 81,
+      "read": 82,
       "matched": 0,
       "duplicates": 0,
       "added": 0,
       "excluded": {
-        "unrelated_title": 73,
+        "unrelated_title": 74,
         "product_marketing": 4,
         "location_outside_israel_or_unknown": 3,
         "no_relevant_duties": 1
@@ -377,8 +377,8 @@
       "success": true,
       "read": 9,
       "matched": 1,
-      "duplicates": 0,
-      "added": 1,
+      "duplicates": 1,
+      "added": 0,
       "excluded": {
         "unrelated_title": 8
       }
@@ -395,7 +395,7 @@
       "board": "wizinc",
       "sourceId": 4621708006,
       "discoveredAt": "2026-11-19T17:01:20Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2025-12-01T04:31:36-05:00",
       "employmentType": null,
       "workSchedule": null,
@@ -448,7 +448,7 @@
       "board": "pointfive",
       "sourceId": "190902b0-2224-43d6-a06c-b37976c6f05d",
       "discoveredAt": "2026-11-26T17:04:28Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-11-01T13:46:24.214+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -476,7 +476,7 @@
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -504,7 +504,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "PartTime",
@@ -557,7 +557,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -585,7 +585,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -613,7 +613,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -641,7 +641,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -694,7 +694,7 @@
       "board": "riskified",
       "sourceId": 8938980002,
       "discoveredAt": "2026-11-24T17:01:59Z",
-      "verifiedAt": "2026-11-26T17:04:28Z",
+      "verifiedAt": "2026-11-27T17:03:25Z",
       "publishedAt": "2026-11-24T11:08:05-05:00",
       "employmentType": null,
       "workSchedule": null,
@@ -716,7 +716,7 @@
   "lastExecution": {
     "trigger": "scheduled",
     "outcome": "succeeded",
-    "finishedAt": "2026-11-26T17:04:36Z",
-    "runId": "da7fd1b8-4aac-4524-a184-be1f20ce7644"
+    "finishedAt": "2026-11-27T17:03:32Z",
+    "runId": "87bd92c8-4b39-433f-bb07-cd9ec436b89f"
   }
 }
