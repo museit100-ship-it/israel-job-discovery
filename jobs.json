@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "attemptedAt": "2026-11-27T17:03:25Z",
-  "lastSuccessfulAt": "2026-11-27T17:03:25Z",
+  "attemptedAt": "2026-11-28T16:46:06Z",
+  "lastSuccessfulAt": "2026-11-28T16:46:06Z",
   "sources": {
     "Greenhouse/wizinc": {
       "success": true,
@@ -98,12 +98,12 @@
     },
     "Ashby/semperis": {
       "success": true,
-      "read": 31,
+      "read": 32,
       "matched": 2,
       "duplicates": 2,
       "added": 0,
       "excluded": {
-        "unrelated_title": 29
+        "unrelated_title": 30
       }
     },
     "Ashby/matia": {
@@ -395,7 +395,7 @@
       "board": "wizinc",
       "sourceId": 4621708006,
       "discoveredAt": "2026-11-19T17:01:20Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2025-12-01T04:31:36-05:00",
       "employmentType": null,
       "workSchedule": null,
@@ -448,7 +448,7 @@
       "board": "pointfive",
       "sourceId": "190902b0-2224-43d6-a06c-b37976c6f05d",
       "discoveredAt": "2026-11-26T17:04:28Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-11-01T13:46:24.214+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -476,7 +476,7 @@
       "board": "airslate",
       "sourceId": "65b92dec-8594-4b9e-afb0-59d79450f1ca",
       "discoveredAt": "2026-11-16T11:20:50Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": null,
       "employmentType": null,
       "workSchedule": "Full-time",
@@ -504,7 +504,7 @@
       "board": "chamelio",
       "sourceId": "301a34e9-b79e-41ac-8f1f-d72381592196",
       "discoveredAt": "2026-11-16T09:09:40Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-11-16T09:05:36.792+00:00",
       "employmentType": null,
       "workSchedule": "PartTime",
@@ -557,7 +557,7 @@
       "board": "eleoshealth",
       "sourceId": 4934726101,
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-07-22T09:02:07-04:00",
       "employmentType": null,
       "workSchedule": null,
@@ -585,7 +585,7 @@
       "board": "similarweb",
       "sourceId": 8303116,
       "discoveredAt": "2026-11-15T15:16:05Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-10-20T08:58:35-04:00",
       "employmentType": null,
       "workSchedule": "Part Time",
@@ -613,7 +613,7 @@
       "board": "semperis",
       "sourceId": "71a75c54-c53c-41bc-bbae-4109f0858009",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-11-01T07:50:54.551+00:00",
       "employmentType": "החלפה לחופשת לידה",
       "workSchedule": "FullTime",
@@ -641,7 +641,7 @@
       "board": "semperis",
       "sourceId": "71d4c46d-70bb-4de7-9e51-bc19181a157a",
       "discoveredAt": "2026-11-15T15:33:57Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-10-20T17:53:13.842+00:00",
       "employmentType": null,
       "workSchedule": "FullTime",
@@ -694,7 +694,7 @@
       "board": "riskified",
       "sourceId": 8938980002,
       "discoveredAt": "2026-11-24T17:01:59Z",
-      "verifiedAt": "2026-11-27T17:03:25Z",
+      "verifiedAt": "2026-11-28T16:46:06Z",
       "publishedAt": "2026-11-24T11:08:05-05:00",
       "employmentType": null,
       "workSchedule": null,
@@ -716,7 +716,7 @@
   "lastExecution": {
     "trigger": "scheduled",
     "outcome": "succeeded",
-    "finishedAt": "2026-11-27T17:03:32Z",
-    "runId": "87bd92c8-4b39-433f-bb07-cd9ec436b89f"
+    "finishedAt": "2026-11-28T16:46:12Z",
+    "runId": "2dff964c-8dbd-4eba-8d10-cd669b33ec6f"
   }
 }
